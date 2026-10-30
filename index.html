@@ -1,0 +1,1105 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MAESTRO SHOP | الرئيسية</title>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<style>
+:root {
+    --cyan: var(--site-primary, #00f5f7);
+    --site-primary: #00f5f7;
+    --site-bg: #000000;
+    --site-secondary: #0d0f12;
+    --muted: #858b9b;
+}
+*{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}body{background:var(--site-bg);color:#fff;font-family:Cairo,Tahoma,sans-serif;padding-bottom:95px}.warning-box{background:#15090a;border:1px solid #732222;border-radius:14px;padding:22px 18px;margin:20px auto;max-width:92%;text-align:center;box-shadow:0 0 15px rgba(115,34,34,0.2);position:relative;z-index:10}.warning-box p{color:#ff4d4d;font-size:13.5px;line-height:1.8;font-weight:bold;text-shadow:0 0 8px rgba(255,77,77,0.6);margin:0}header{height:72px;display:flex;align-items:center;gap:13px;padding:8px 5%;background:var(--site-bg);border-bottom:1px solid #123036}header h2{color:var(--cyan);font-size:22px;font-weight:900;text-shadow:0 0 15px #00ffff66}.logo-small{width:60px;height:60px;border-radius:13px;object-fit:cover;box-shadow:0 0 20px #00eaff55}.hero{min-height:315px;padding:35px 15px 25px;background:radial-gradient(ellipse at 50% 40%,#00353c 0%,#001619 32%,#000707 65%,var(--site-bg) 100%);display:flex;flex-direction:column;align-items:center;justify-content:center;border-bottom:1px solid #15272b}.logo-large{width:140px;height:140px;border-radius:15px;object-fit:cover;box-shadow:0 0 30px #00eaff66,0 0 65px #00eaff33}.hero h1{margin-top:25px;font-size:clamp(39px,10vw,54px);font-weight:900;line-height:1.4;white-space:nowrap;background:linear-gradient(90deg,#00efff,#8effff,#f0ffff);-webkit-background-clip:text;background-clip:text;color:transparent;filter:drop-shadow(0 0 12px #00f5f744)}.description{max-width:600px;margin:auto;text-align:center;color:var(--muted);font-size:15px;line-height:1.9;padding:12px 18px 22px}.actions{display:flex;flex-direction:column;align-items:center;gap:16px;padding:10px 10px 30px}.actions a{text-decoration:none;font-size:17px;font-weight:800;display:flex;align-items:center;justify-content:center;gap:12px;border-radius:50px;transition:.2s}.primary{background:var(--cyan);color:var(--site-bg);min-width:135px;padding:9px 26px;box-shadow:0 0 22px #00ffff66}.secondary{background:#032123;color:var(--cyan);border:1px solid #008e95;min-width:245px;padding:8px 19px}.actions a:active{transform:scale(.97)}
+.floating-channel-btn{position:fixed;left:18px;bottom:84px;z-index:900;width:62px;height:62px;background:linear-gradient(135deg,var(--cyan) 0%,#008e95 100%);border-radius:50%;display:flex;align-items:center;justify-content:center;color:var(--site-bg);font-size:24px;text-decoration:none;cursor:pointer;box-shadow:0 0 22px rgba(0,245,247,0.55),0 6px 18px rgba(0,0,0,0.6);border:2px solid var(--cyan);animation:pulseChannel 2s infinite;transition:transform .15s}
+.floating-channel-btn:active{transform:scale(0.9)}
+@keyframes pulseChannel{0%,100%{box-shadow:0 0 22px rgba(0,245,247,0.55),0 6px 18px rgba(0,0,0,0.6)}50%{box-shadow:0 0 40px rgba(0,245,247,1),0 6px 18px rgba(0,0,0,0.6)}}
+.bottom-nav{position:fixed;bottom:0;left:0;width:100%;background:#0b1018;border-top:1px solid #12353a;display:flex;justify-content:space-around;align-items:center;padding:6px 0;z-index:1000}
+.nav-item{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;color:#8791a8;font-size:9px;text-decoration:none;flex:1;text-align:center;cursor:pointer;position:relative;white-space:nowrap}
+.nav-item i{font-size:18px}
+.badge-dot{position:absolute;top:3px;right:calc(50% - 12px);width:9px;height:9px;background-color:#ff4d4d;border-radius:50%;border:2px solid #0b1018;box-shadow:0 0 8px #ff4d4d;display:none}.badge-dot.show{display:block}.page-section{display:none}.page-section.active-page{display:block}.category-modal{display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.85);z-index:2000;justify-content:center;align-items:center}.category-modal.show{display:flex}.category-content{background:#090c10;border:1px solid #1c2634;border-radius:24px;width:90%;max-width:400px;padding:22px 15px;box-shadow:0 4px 30px rgba(0,0,0,0.9);max-height:85vh;display:flex;flex-direction:column}.category-option{display:flex;align-items:center;justify-content:space-between;padding:16px 14px;border-bottom:1px solid #161b22;color:#fff;cursor:pointer;font-size:15px;font-weight:bold}.category-option:last-child{border-bottom:none}#imageLightBox{display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.92);z-index:3000;justify-content:center;align-items:center;padding:20px}#imageLightBox.show{display:flex}#imageLightBox img{max-width:100%;max-height:90vh;border-radius:12px;object-fit:contain;box-shadow:0 0 25px rgba(0,245,247,0.3);border:1px solid #1c2634}#imageLightBox .close-btn{position:absolute;top:20px;right:20px;background:#0b1018;color:var(--cyan);border:1px solid var(--cyan);border-radius:50%;width:40px;height:40px;display:flex;align-items:center;justify-content:center;font-size:18px;cursor:pointer;box-shadow:0 0 10px rgba(0,245,247,0.4)}.admin-section-title{color:var(--cyan);font-size:14px;font-weight:bold;margin-bottom:10px;border-bottom:1px solid #162230;padding-bottom:5px;margin-top:20px}.admin-input{width:100%;background:#02090c;border:1px solid #006b72;border-radius:10px;padding:10px;color:#fff;font-size:13px;margin-bottom:8px;font-family:inherit}.admin-btn{background:var(--cyan);color:var(--site-bg);border:0;border-radius:12px;padding:8px 16px;font-weight:bold;font-size:12px;cursor:pointer;margin-bottom:10px}.admin-btn-danger{background:#ff4d4d;color:#fff;border:0;border-radius:8px;padding:6px 12px;font-size:11px;cursor:pointer}.custom-toast{position:fixed;top:-100px;left:50%;transform:translateX(-50%);background:#090c10;border:1px solid var(--cyan);border-radius:30px;padding:14px 24px;color:#fff;font-size:14px;font-weight:bold;display:flex;align-items:center;gap:12px;box-shadow:0 0 20px rgba(0,245,247,0.4);z-index:9999;transition:all 0.4s cubic-bezier(0.68,-0.55,0.265,1.55);pointer-events:none;width:max-content;max-width:90%}.custom-toast.show{top:20px}.custom-toast.error{border-color:#ff4d4d;box-shadow:0 0 20px rgba(255,77,77,0.4)}.custom-toast i{font-size:20px}.custom-toast.success i{color:var(--cyan)}.custom-toast.error i{color:#ff4d4d}
+
+/* ========== صفحة شحن الألعاب ========== */
+#rechargePage{--rc-bg-color:#f8fafc;--rc-card-bg:#ffffff;--rc-text-main:#1e293b;--rc-text-muted:#64748b;--rc-primary:#f59e0b;--rc-primary-hover:#d97706;--rc-accent:#10b981;--rc-border-color:#e2e8f0;--rc-shadow:0 10px 25px -5px rgba(0,0,0,0.05),0 8px 10px -6px rgba(0,0,0,0.05);padding:20px 15px;background:var(--rc-bg-color);color:var(--rc-text-main);border-radius:20px;margin:15px auto;max-width:600px;transition:background-color .3s,color .3s;}
+#rechargePage[data-rc-theme="dark"]{--rc-bg-color:#0f172a;--rc-card-bg:#1e293b;--rc-text-main:#f8fafc;--rc-text-muted:#94a3b8;--rc-primary-hover:#fbbf24;--rc-border-color:#334155;--rc-shadow:0 10px 25px -5px rgba(0,0,0,0.3);}
+#rechargePage .rc-header{display:flex;justify-content:space-between;align-items:center;padding-bottom:15px;border-bottom:1px solid var(--rc-border-color);margin-bottom:20px}
+#rechargePage .rc-header .logo{display:flex;align-items:center;gap:10px;font-size:1.15rem;font-weight:900;color:var(--rc-primary)}
+#rechargePage .rc-header .logo i{background:var(--rc-primary);color:#fff;padding:8px;border-radius:12px}
+#rechargePage .header-controls{display:flex;gap:10px;align-items:center}
+#rechargePage .btn-theme,#rechargePage .btn-settings{background:var(--rc-card-bg);border:1px solid var(--rc-border-color);color:var(--rc-text-main);padding:8px 12px;border-radius:10px;cursor:pointer;font-size:.9rem;font-family:inherit}
+#rechargePage .banner{background:linear-gradient(135deg,#f59e0b,#d97706);border-radius:20px;padding:20px;color:#fff;display:flex;align-items:center;justify-content:space-between;margin-bottom:25px;box-shadow:var(--rc-shadow)}
+#rechargePage .banner h2{font-size:1.1rem;margin-bottom:5px}
+#rechargePage .banner p{font-size:.85rem;opacity:.9}
+#rechargePage .banner img{width:70px;height:70px;border-radius:15px;object-fit:cover}
+#rechargePage .section-title{font-size:1.05rem;font-weight:700;margin-bottom:15px;display:flex;align-items:center;gap:8px;color:var(--rc-text-main)}
+#rechargePage .games-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin-bottom:25px}
+#rechargePage .game-card{background:var(--rc-card-bg);border:2px solid var(--rc-border-color);border-radius:15px;text-align:center;padding:10px 5px;cursor:pointer;box-shadow:var(--rc-shadow);transition:.2s}
+#rechargePage .game-card.active{border-color:var(--rc-primary);background:rgba(245,158,11,0.05)}
+#rechargePage .game-card img{width:50px;height:50px;border-radius:10px;object-fit:cover;margin-bottom:5px;background:#fff;padding:0;border:1px solid #eee;}
+#rechargePage .game-card span{font-size:.85rem;font-weight:700;display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;color:var(--rc-text-main)}
+#rechargePage .step-box{background:var(--rc-card-bg);border:1px solid var(--rc-border-color);border-radius:20px;padding:18px;margin-bottom:18px;box-shadow:var(--rc-shadow)}
+#rechargePage .step-header{display:flex;align-items:center;gap:10px;margin-bottom:15px}
+#rechargePage .step-num{background:var(--rc-primary);color:#fff;width:28px;height:28px;display:flex;align-items:center;justify-content:center;border-radius:50%;font-weight:bold;font-size:.9rem;flex-shrink:0}
+#rechargePage .step-title{font-size:.95rem;font-weight:700;color:var(--rc-text-main)}
+#rechargePage .packages-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
+#rechargePage .package-card{background:var(--rc-bg-color);border:2px solid var(--rc-border-color);border-radius:15px;padding:12px 8px;text-align:center;cursor:pointer;transition:.2s}
+#rechargePage .package-card.selected{border-color:var(--rc-primary);background:rgba(245,158,11,0.08)}
+#rechargePage .package-card img{width:40px;height:40px;object-fit:contain;margin-bottom:5px}
+#rechargePage .package-title{font-size:.85rem;font-weight:700;margin-bottom:4px;color:var(--rc-text-main)}
+#rechargePage .package-price{font-size:.95rem;font-weight:900;color:var(--rc-accent)}
+#rechargePage .package-old-price{font-size:.7rem;text-decoration:line-through;color:var(--rc-text-muted)}
+#rechargePage .input-group{margin-bottom:15px}
+#rechargePage .input-group label{display:block;font-size:.82rem;font-weight:600;margin-bottom:5px;color:var(--rc-text-muted)}
+#rechargePage .input-group input{width:100%;padding:11px 14px;background:var(--rc-bg-color);border:1px solid var(--rc-border-color);border-radius:12px;color:var(--rc-text-main);font-size:.9rem;outline:none;font-family:inherit}
+#rechargePage .input-group input:focus{border-color:var(--rc-primary)}
+#rechargePage .btn-submit{width:100%;background:var(--rc-accent);color:#fff;border:none;padding:15px;border-radius:15px;font-size:1.05rem;font-weight:700;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:10px;box-shadow:0 4px 12px rgba(16,185,129,.2);font-family:inherit}
+#rechargePage .btn-submit:hover{opacity:.9}
+#rechargePage .features{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:18px}
+#rechargePage .feature-item{background:var(--rc-card-bg);border:1px solid var(--rc-border-color);padding:14px 8px;text-align:center;border-radius:15px;font-size:.75rem;font-weight:600;color:var(--rc-text-main)}
+#rechargePage .feature-item i{font-size:1.1rem;color:var(--rc-primary);margin-bottom:5px;display:block}
+
+/* ========== صفحة المتجر (Midzila Style) ========== */
+#storePage {background-color: var(--site-secondary);color: #ffffff;padding: 15px;font-family: 'Cairo', sans-serif;padding-bottom: 30px;}
+#storePage .st-header {display: flex;align-items: center;justify-content: space-between;margin-bottom: 20px;padding: 5px 10px;}
+#storePage .st-logo {color: #00ff00;font-size: 26px;font-weight: 900;font-style: italic;letter-spacing: 2px;text-shadow: 0 0 10px rgba(0, 255, 0, 0.4);}
+#storePage .st-icons {display: flex;gap: 10px;}
+#storePage .st-icon-btn {background: #1a1d24;border: 1px solid #2a2e37;color: #fff;width: 40px;height: 40px;border-radius: 12px;display: flex;align-items: center;justify-content: center;font-size: 16px;cursor: pointer;}
+#storePage .st-hero-text {text-align: center;margin-bottom: 20px;}
+#storePage .st-hero-text h2 {color: #00ff00;font-size: 28px;font-weight: 900;margin-bottom: 5px;}
+#storePage .st-hero-text p {color: #b0b4ba;font-size: 14px;}
+#storePage .st-search {background: #1a1d24;border: 1px solid #2a2e37;border-radius: 15px;padding: 5px;display: flex;align-items: center;margin-bottom: 15px;}
+#storePage .st-search input {flex-grow: 1;background: transparent;border: none;padding: 10px 15px;color: #fff;font-size: 14px;outline: none;font-family: inherit;}
+#storePage .st-search-btn {background: #00ff00;color: #000;border: none;width: 45px;height: 45px;border-radius: 12px;display: flex;align-items: center;justify-content: center;font-size: 18px;cursor: pointer;}
+#storePage .st-tags {display: flex;gap: 10px;overflow-x: auto;padding-bottom: 10px;margin-bottom: 20px;scrollbar-width: none;}
+#storePage .st-tags::-webkit-scrollbar { display: none; }
+#storePage .st-tag {background: #1a1d24;border: 1px solid #2a2e37;color: #fff;padding: 8px 16px;border-radius: 20px;font-size: 13px;font-weight: bold;white-space: nowrap;cursor: pointer;}
+#storePage .st-tag.active { background: #00ff00; color: #000; border-color: #00ff00; }
+#storePage .st-banner {background: linear-gradient(90deg, rgba(0,0,0,0.8), rgba(0,0,0,0.2)), url('https://images.unsplash.com/photo-1542751371-adc38448a05e?q=80&w=1000&auto=format&fit=crop') center/cover;border-radius: 20px;padding: 25px;margin-bottom: 25px;border: 1px solid #2a2e37;text-align: center;position: relative;overflow: hidden;}
+#storePage .st-banner h3 { color: #fff; font-size: 20px; margin-bottom: 10px; }
+#storePage .st-banner p { color: #b0b4ba; font-size: 14px; margin-bottom: 15px; }
+#storePage .st-banner-btn { background: transparent; border: 1px solid #00ff00; color: #00ff00; padding: 8px 20px; border-radius: 10px; font-weight: bold; font-family: inherit; cursor: pointer; }
+#storePage .st-section-title {display: flex;justify-content: space-between;align-items: center;margin-bottom: 15px;}
+#storePage .st-section-title h3 { font-size: 20px; font-weight: 900; }
+#storePage .st-section-title a { color: #00ff00; font-size: 14px; text-decoration: none; font-weight: bold; }
+
+/* شبكة المتجر - 3 أعمدة (مصغرة) */
+#storePage .st-games-grid {display: grid;grid-template-columns: repeat(3, 1fr);gap: 10px;margin-bottom: 20px;}
+#storePage .st-game-card {background: #1a1d24;border-radius: 14px;overflow: hidden;cursor: pointer;position: relative;border: 1px solid #2a2e37;display: flex;flex-direction: column;transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;}
+#storePage .st-game-card:hover {transform: translateY(-3px);box-shadow: 0 6px 15px rgba(0, 255, 0, 0.15);border-color: #00ff00;}
+#storePage .st-game-card img {width: 100%;height: 110px;object-fit: cover;display: block;margin: 0;padding: 0;background: #fff;}
+#storePage .st-game-title {padding: 8px 5px;font-size: 12px;font-weight: 800;text-align: center;color: #ffffff;background: #15181e;border-top: 1px solid #2a2e37;}
+
+/* زر عرض المزيد */
+#storePage .btn-show-more {display: block;width: 100%;background: transparent;border: 1px solid #00ff00;color: #00ff00;padding: 12px;border-radius: 15px;font-size: 15px;font-weight: bold;font-family: inherit;text-align: center;cursor: pointer;margin-top: 10px;margin-bottom: 30px;transition: all 0.3s ease;}
+#storePage .btn-show-more:hover {background: #00ff00;color: #000;}
+#moreGamesSection {display: none;}
+
+/* ===== قسم التطبيقات ===== */
+#storePage .st-apps-grid {display: grid;grid-template-columns: repeat(3, 1fr);gap: 10px;margin-bottom: 25px;}
+#storePage .st-app-card {background: #1a1d24;border-radius: 14px;overflow: hidden;cursor: pointer;border: 1px solid #2a2e37;display: flex;flex-direction: column;transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;}
+#storePage .st-app-card:hover {transform: translateY(-3px);box-shadow: 0 6px 15px rgba(0, 255, 0, 0.15);border-color: #00ff00;}
+#storePage .st-app-img-wrap {width: 100%;height: 90px;background: var(--site-secondary);display: flex;align-items: center;justify-content: center;padding: 10px;box-sizing: border-box;}
+#storePage .st-app-card img {max-width: 100%;max-height: 100%;width: auto;height: auto;object-fit: contain;display: block;border-radius: 8px;}
+#storePage .st-app-info {padding: 8px 5px 10px;text-align: center;background: #15181e;border-top: 1px solid #2a2e37;}
+#storePage .st-app-title {font-size: 12px;font-weight: 800;color: #ffffff;margin-bottom: 4px;}
+#storePage .st-app-services {font-size: 10px;font-weight: 700;color: #00ff00;line-height: 1.5;}
+
+/* ===== نافذة الدعم والخيارات ===== */
+.support-modal-overlay {display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.85);backdrop-filter:blur(5px);z-index:7000;justify-content:center;align-items:flex-end;}
+.support-modal-overlay.show {display:flex;}
+.support-modal-content {background:#1a1d24;width:100%;max-width:500px;border-radius:25px 25px 0 0;padding:25px 20px 35px 20px;box-shadow:0 -10px 30px rgba(0,0,0,0.8);text-align:center;border-top:1px solid #2a2e37;}
+.support-modal-header {display:flex;justify-content:space-between;align-items:center;margin-bottom:20px;}
+.support-modal-header h3 {color:#fff;font-size:18px;font-weight:bold;margin:0;}
+.support-modal-close {background:#2a2e37;color:#fff;border:none;width:32px;height:32px;border-radius:50%;display:flex;align-items:center;justify-content:center;cursor:pointer;font-size:16px;}
+.support-option-btn {display:flex;align-items:center;justify-content:space-between;background:#15181e;border:1px solid #2a2e37;border-radius:16px;padding:15px 20px;margin-bottom:12px;cursor:pointer;text-decoration:none;transition:0.2s;}
+.support-option-btn:active {transform:scale(0.98);background:#1f232b;}
+.support-option-btn .text-wrap {text-align:right;}
+.support-option-btn .text-wrap h4 {color:#fff;font-size:15px;font-weight:bold;margin-bottom:4px;}
+.support-option-btn .text-wrap p {color:#8b949e;font-size:11.5px;margin:0;}
+.support-option-btn i {font-size:26px;}
+.support-option-btn.whatsapp i {color:#25D366;}
+.support-option-btn.chat i {color:#00ff00;}
+</style>
+</head>
+<body>
+
+<header><img class="fr3on-logo logo-small" alt="MAESTRO SHOP"><h2 id="headerTitleText">MAESTRO SHOP</h2></header>
+
+<div id="homePage" class="page-section active-page">
+<section class="hero"><img class="fr3on-logo logo-large" alt="MAESTRO SHOP" style="cursor:pointer;" onclick="openLightBox(currentLogo)"><h1 id="heroTitleText">MAESTRO SHOP</h1></section>
+<p class="description" id="heroDescText">وجهة ألعاب بلمسة نيونية، سريعة، ومهيأة لعرض الروابط والتواصل مع مجتمع MAESTRO SHOP.</p>
+<div class="actions">
+<a class="primary" href="#" onclick="switchPage('postsPage', event); updateNavById('navPosts');">المنشورات</a>
+<a class="secondary" id="homeAddAdBtn" href="#" onclick="switchPage('addAdPage', event); updateNavById('navAddAd');" style="display:none;"><i class="fa-solid fa-plus-circle"></i> أضف إعلاناً</a>
+<a class="secondary" href="#guide"><i class="fa-solid fa-play"></i> كيفية استخدام المتجر</a>
+</div>
+<div class="warning-box"><p id="homeWarningText">احذر النصب هذه هي الروابط والحسابات الرسمية الوحيدة<br>الخاصة بمتجر MAESTRO SHOP الإدارة غير مسؤولة عن<br>أي تعامل يتم خارج الروابط والحسابات الرسمية.</p></div>
+<section class="store-live-section" style="background:#090c10;border:1px solid #1c2634;border-radius:20px;padding:25px 20px;margin:0 auto 20px auto;max-width:92%;text-align:right;box-shadow:0 4px 20px rgba(0,0,0,0.6);">
+<div style="text-align:right;margin-bottom:15px;"><span style="display:inline-block;background:#0b1f24;color:#00f5f7;font-size:12px;font-weight:bold;padding:6px 18px;border-radius:20px;border:1px solid rgba(0,245,247,0.2);">MAESTRO SHOP الرسمي</span></div>
+<h2 style="color:#ffffff;font-size:22px;font-weight:bold;line-height:1.5;margin-bottom:15px;text-align:right;">اكتشف روابط المتجر الرسمية في لوحة واحدة بتجربة فاخرة وسريعة.</h2>
+<p style="color:#7b8396;font-size:13px;line-height:1.7;margin:0;text-align:right;">واجهة استقبال متحركة مصممة لتقديم تنبيهات المتجر وروابط التواصل الاجتماعي بشكل واضح واحترافي على الهاتف وسطح المكتب.</p>
+</section>
+<div style="display:flex;justify-content:space-between;align-items:center;max-width:92%;margin:25px auto 12px auto;padding:0 5px;" dir="ltr"><span style="display:inline-block;background:#161b22;color:#8b949e;font-size:11px;font-weight:bold;padding:4px 12px;border-radius:20px;border:1px solid #30363d;" dir="rtl">روابط متجددة</span><h3 style="color:#ffffff;font-size:20px;font-weight:bold;margin:0;text-align:right;" dir="rtl">قنوات التواصل</h3></div>
+<div id="dynamicChannelsContainer"></div>
+<div id="phonesSectionContainer">
+<div style="display:flex;justify-content:space-between;align-items:center;max-width:92%;margin:30px auto 12px auto;padding:0 5px;" dir="ltr"><span style="display:inline-block;background:#161b22;color:#8b949e;font-size:11px;font-weight:bold;padding:4px 12px;border-radius:20px;border:1px solid #30363d;" dir="rtl">أرقام الدعم</span><h3 style="color:#ffffff;font-size:20px;font-weight:bold;margin:0;text-align:right;" dir="rtl">تواصل مع الإدارة</h3></div>
+<p style="color:#8b949e;font-size:12px;text-align:right;max-width:92%;margin:0 auto 15px auto;">الأرقام الرسمية المعتمدة للدعم الفني والوساطة</p>
+<div id="dynamicPhonesContainer" style="max-width:92%;margin:0 auto 20px auto;display:grid;grid-template-columns:1fr 1fr;gap:12px;" dir="rtl"></div>
+</div>
+<div id="telegramSectionContainer">
+<div style="display:flex;justify-content:space-between;align-items:center;max-width:92%;margin:30px auto 12px auto;padding:0 5px;" dir="ltr"><div style="width:42px;height:42px;background:#0b1f24;border:1px solid rgba(0,245,247,0.3);border-radius:50%;display:flex;align-items:center;justify-content:center;color:#00f5f7;font-size:18px;"><i class="fa-brands fa-telegram"></i></div><h3 style="color:#ffffff;font-size:20px;font-weight:bold;margin:0;text-align:right;" dir="rtl">تواصل عبر تيليجرام</h3></div>
+<p style="color:#8b949e;font-size:12px;text-align:right;max-width:92%;margin:0 auto 15px auto;">الدعم الفني عبر تيليجرام</p>
+<div id="dynamicTelegramContainer" style="max-width:92%;margin:0 auto 20px auto;" dir="rtl"></div>
+</div>
+</div>
+
+<div id="postsPage" class="page-section">
+<div style="max-width:92%;margin:25px auto;background:#090c10;border:1px solid #1c2634;border-radius:25px;padding:25px 15px;box-shadow:0 4px 25px rgba(0,0,0,0.8);text-align:right;" dir="rtl">
+<div style="margin-bottom:25px;padding:0 10px;"><h2 style="color:#ffffff;font-size:24px;font-weight:bold;line-height:1.4;margin-bottom:10px;">تصفح المنشورات والإعلانات</h2><p style="color:#8b949e;font-size:13px;line-height:1.6;">ابحث داخل المنشورات أو استخدم فلتر الفئات لعرض القسم الذي تريده.</p></div>
+<div style="background:#071418;border:1px solid #006b72;border-radius:14px;padding:14px 18px;display:flex;align-items:center;gap:12px;margin-bottom:15px;"><i class="fa-solid fa-magnifying-glass" style="color:var(--cyan);font-size:18px;"></i><div style="flex-grow:1;"><div style="color:var(--cyan);font-size:11px;margin-bottom:2px;">ابحث</div><input type="text" id="searchPostsInput" placeholder="ابحث باسم المنشور أو الوصف..." onkeyup="filterUserPosts()" style="width:100%;background:transparent;border:0;outline:0;color:white;font-size:13px;"></div></div>
+<div onclick="openFilterCategoryModal()" style="background:#071418;border:1px solid #006b72;border-radius:14px;padding:14px 18px;display:flex;align-items:center;justify-content:space-between;cursor:pointer;"><div style="display:flex;align-items:center;gap:12px;"><i class="fa-solid fa-tag" style="color:var(--cyan);font-size:18px;"></i><div><div style="color:var(--cyan);font-size:11px;margin-bottom:2px;">الفئة</div><div id="filterSelectedCategoryText" style="color:white;font-size:14px;font-weight:bold;">الكل</div></div></div><i class="fa-solid fa-chevron-down" style="color:var(--cyan);font-size:14px;"></i></div>
+</div>
+<div id="allPostsContainer" style="max-width:92%;margin:20px auto;text-align:right;" dir="rtl"></div>
+</div>
+
+<div id="addAdPage" class="page-section">
+<div style="max-width:92%;margin:25px auto;background:#090c10;border:1px solid #008e95;border-radius:25px;padding:25px 20px;box-shadow:0 4px 25px rgba(0,245,247,0.15);text-align:right;" dir="rtl">
+<div style="display:flex;align-items:center;gap:15px;margin-bottom:20px;border-bottom:1px solid #1c2634;padding-bottom:18px;"><div style="width:50px;height:50px;background:#0b1f24;border:1px solid rgba(0,245,247,0.3);border-radius:14px;display:flex;align-items:center;justify-content:center;color:var(--cyan);font-size:22px;flex-shrink:0;"><i class="fa-solid fa-file-pen"></i></div><div><h3 style="color:#ffffff;font-size:20px;font-weight:900;margin-bottom:4px;">إضافة إعلان جديد</h3><p style="color:#8b949e;font-size:12px;margin:0;">أنشئ إعلانك الآن وسيتم نشره أو مراجعته حسب الصلاحيات.</p></div></div>
+<div style="display:flex;flex-direction:column;gap:16px;">
+<div><label style="display:block;color:#fff;font-size:13.5px;margin-bottom:8px;font-weight:bold;">رقم الواتساب</label><div style="display:flex;gap:8px;" dir="ltr"><div onclick="openCountryModal('ad')" id="adCountryBtn" style="background:#071418;border:1px solid #006b72;border-radius:14px;padding:12px 14px;display:flex;align-items:center;gap:8px;width:110px;cursor:pointer;"><span id="adFlag">🇪🇬</span><span id="adCode" style="color:#fff;font-weight:bold;font-size:14px;">+20</span><i class="fa-solid fa-chevron-down" style="color:#8b949e;font-size:11px;"></i></div><div style="flex-grow:1;background:#071418;border:1px solid #006b72;border-radius:14px;padding:12px 16px;display:flex;align-items:center;"><input type="tel" id="userAdPhone" placeholder="1032329206" style="width:100%;background:transparent;border:0;outline:0;color:white;font-size:14px;" dir="ltr"></div></div></div>
+<div><label style="display:block;color:#fff;font-size:13.5px;margin-bottom:8px;font-weight:bold;">الفئة</label><select id="userAdCategory" style="width:100%;background:#071418;border:1px solid #006b72;border-radius:14px;padding:14px 18px;color:#fff;outline:0;font-size:14px;"><option value="" disabled selected>اختر الفئة</option><option value="فري فاير">فري فاير</option><option value="ببجي">ببجي</option><option value="بيس فيفا و كلاش">بيس فيفا و كلاش</option><option value="بلود سترايك">بلود سترايك</option><option value="روبلوكس">روبلوكس</option><option value="حسابات سوشيال ميديا">حسابات سوشيال ميديا</option><option value="اخري">اخري</option></select></div>
+<div><label style="display:block;color:#fff;font-size:13.5px;margin-bottom:8px;font-weight:bold;">السعر</label><div style="background:#071418;border:1px solid #006b72;border-radius:14px;padding:4px 6px 4px 16px;display:flex;align-items:center;" dir="ltr"><input type="text" id="userAdPrice" value="0" style="flex-grow:1;background:transparent;border:0;outline:0;color:white;font-size:16px;padding:8px;" dir="rtl"><div onclick="openCurrencyModal()" id="currencyBtn" style="background:#0b2226;color:var(--cyan);font-weight:900;font-size:14px;padding:8px 16px;border-radius:10px;border:1px solid rgba(0,245,247,0.3);cursor:pointer;display:flex;align-items:center;gap:6px;"><span id="selectedCurrencyText">EGP</span><i class="fa-solid fa-chevron-down" style="font-size:10px;"></i></div></div></div>
+<div><label style="display:block;color:#fff;font-size:13.5px;margin-bottom:8px;font-weight:bold;">وصف الإعلان</label><textarea id="userAdDesc" rows="4" placeholder="اكتب تفاصيل الحساب..." style="width:100%;background:#071418;border:1px solid #006b72;border-radius:14px;padding:14px 18px;color:#fff;outline:0;resize:none;" dir="rtl"></textarea></div>
+<div><label style="display:block;color:#fff;font-size:13.5px;margin-bottom:8px;font-weight:bold;">صورة الإعلان</label><div onclick="document.getElementById('userAdImageFile').click()" style="display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;background:#071418;border:1px dashed #008e95;border-radius:16px;padding:25px;cursor:pointer;text-align:center;"><div style="width:48px;height:48px;background:#0b1f24;border:1px solid rgba(0,245,247,0.3);border-radius:50%;display:flex;align-items:center;justify-content:center;color:var(--cyan);font-size:20px;"><i class="fa-solid fa-image"></i></div><div style="color:#fff;font-size:14px;font-weight:bold;">اختر صورة الإعلان</div><input type="file" id="userAdImageFile" accept="image/*" style="display:none;" onchange="handleSingleImagePick(event)"></div><div id="selectedImagePreviewContainer" style="margin-top:10px;"></div></div>
+<button onclick="submitUserAd()" style="background:var(--cyan);color:var(--site-bg);border:0;border-radius:35px;padding:15px;font-weight:900;font-size:16px;cursor:pointer;margin-top:10px;box-shadow:0 0 20px rgba(0,245,247,0.4);">إرسال الإعلان 🚀</button>
+</div>
+</div>
+</div>
+
+<div id="adminChannelPage" class="page-section">
+<div style="max-width:92%;margin:20px auto 15px auto;background:#090c10;border:1px solid #1c2634;border-radius:16px;padding:12px 16px;display:flex;align-items:center;justify-content:space-between;" dir="rtl"><div style="display:flex;align-items:center;gap:10px;overflow:hidden;"><i class="fa-solid fa-thumbtack" style="color:#ffb703;font-size:16px;flex-shrink:0;"></i><span style="color:#ffb703;font-weight:bold;font-size:13px;white-space:nowrap;">منشور مثبت</span><span style="color:#8b949e;font-size:12px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">| فرصة من MAESTRO SHOP 🔥</span></div><div style="display:flex;gap:6px;flex-shrink:0;" dir="ltr"><button style="background:#161b22;color:#fff;border:1px solid #30363d;border-radius:8px;width:30px;height:30px;cursor:pointer;display:flex;align-items:center;justify-content:center;"><i class="fa-solid fa-chevron-left" style="font-size:11px;"></i></button><span style="color:#8b949e;font-size:12px;display:flex;align-items:center;padding:0 4px;">1/2</span><button style="background:#161b22;color:#fff;border:1px solid #30363d;border-radius:8px;width:30px;height:30px;cursor:pointer;display:flex;align-items:center;justify-content:center;"><i class="fa-solid fa-chevron-right" style="font-size:11px;"></i></button></div></div>
+<div style="max-width:92%;margin:15px auto;background:linear-gradient(145deg,#090c10,#040608);border:1px solid #1c2634;border-radius:25px;padding:30px 20px;box-shadow:0 4px 30px rgba(0,0,0,0.8);text-align:center;display:flex;align-items:center;justify-content:space-between;gap:15px;" dir="rtl"><div style="text-align:right;flex-grow:1;"><h2 style="color:#ffffff;font-size:24px;font-weight:900;margin-bottom:8px;">قناة MAESTRO SHOP</h2><p style="color:#8b949e;font-size:12.5px;line-height:1.6;margin:0;">تابع أحدث العروض والمنشورات الرسمية من الإدارة مباشرة.</p></div><div style="width:80px;height:80px;border-radius:16px;overflow:hidden;border:1px solid rgba(0,245,247,0.3);flex-shrink:0;cursor:pointer;" onclick="openLightBox(currentLogo)"><img class="fr3on-logo" style="width:100%;height:100%;object-fit:cover;" alt="MAESTRO SHOP"></div></div>
+<div id="adminPostFormContainer" style="display:none;max-width:92%;margin:25px auto;background:#090c10;border:1px solid #008e95;border-radius:25px;padding:25px 15px;box-shadow:0 4px 25px rgba(0,245,247,0.15);text-align:right;" dir="rtl">
+<div style="margin-bottom:20px;padding:0 10px;border-bottom:1px solid #1c2634;padding-bottom:15px;"><span style="display:inline-block;background:#0b1f24;color:#00f5f7;font-size:11px;font-weight:bold;padding:4px 14px;border-radius:20px;border:1px solid rgba(0,245,247,0.3);margin-bottom:8px;">لوحة تحكم المطور</span><h3 style="color:#ffffff;font-size:20px;font-weight:bold;">إضافة منشور جديد للقناة</h3></div>
+<div style="display:flex;flex-direction:column;gap:15px;padding:0 10px;">
+<div><label style="display:block;color:var(--cyan);font-size:13px;margin-bottom:5px;font-weight:bold;">عنوان المنشور / المنتج:</label><input type="text" id="postTitleInput" placeholder="مثال: حساب فري فاير أسطوري..." style="width:100%;background:#071418;border:1px solid #006b72;border-radius:12px;padding:12px;color:#fff;outline:0;font-size:13px;"></div>
+<div><label style="display:block;color:var(--cyan);font-size:13px;margin-bottom:5px;font-weight:bold;">صورة المنشور:</label><div style="display:flex;gap:10px;align-items:center;"><input type="text" id="postImageInput" placeholder="رابط الصورة أو اختر من الجهاز..." style="flex-grow:1;background:#071418;border:1px solid #006b72;border-radius:12px;padding:12px;color:#fff;outline:0;font-size:12px;" dir="ltr"><div onclick="document.getElementById('imageFilePicker').click()" style="background:#00252b;color:var(--cyan);border:1px solid var(--cyan);border-radius:12px;padding:11px 15px;font-size:13px;font-weight:bold;cursor:pointer;white-space:nowrap;">اختر صورة</div><input type="file" id="imageFilePicker" accept="image/*" style="display:none;" onchange="handleImagePick(event)"></div></div>
+<div><label style="display:block;color:var(--cyan);font-size:13px;margin-bottom:5px;font-weight:bold;">وصف المنشور:</label><textarea id="postDescInput" rows="4" placeholder="التفاصيل..." style="width:100%;background:#071418;border:1px solid #006b72;border-radius:12px;padding:12px;color:#fff;outline:0;resize:none;"></textarea></div>
+<div><label style="display:block;color:var(--cyan);font-size:13px;margin-bottom:5px;font-weight:bold;">رابط التواصل:</label><input type="text" id="postLinkInput" placeholder="https://wa.me/..." style="width:100%;background:#071418;border:1px solid #006b72;border-radius:12px;padding:12px;color:#fff;outline:0;font-size:13px;" dir="ltr"></div>
+<button type="button" onclick="addNewPostToChannel()" style="background:var(--cyan);color:var(--site-bg);border:0;border-radius:30px;padding:15px;font-weight:bold;font-size:16px;cursor:pointer;margin-top:10px;box-shadow:0 0 15px rgba(0,245,247,0.4);">نشر في القناة الآن 🚀</button>
+</div>
+</div>
+<div id="channelPostsContainer" style="max-width:92%;margin:20px auto;text-align:right;" dir="rtl"></div>
+</div>
+
+<div id="messagesPage" class="page-section">
+<div style="max-width:92%;margin:30px auto;background:#090c10;border:1px solid #1c2634;border-radius:25px;padding:30px 20px;box-shadow:0 4px 25px rgba(0,0,0,0.8);text-align:right;" dir="rtl">
+<h2 style="color:var(--cyan);font-size:22px;font-weight:bold;margin-bottom:15px;"><i class="fa-solid fa-comment"></i> الرسائل ومحادثات العملاء</h2>
+<div id="messagesAdminSection" style="display:none;margin-bottom:25px;border-bottom:1px solid #1c2634;padding-bottom:20px;"><div style="color:#8b949e;font-size:13px;margin-bottom:12px;">طلبات الإعلانات الجديدة بانتظار موافقتك:</div><div id="adminPendingRequestsContainer"></div></div>
+<div id="adminChatsListSection" style="display:none;"><h3 style="color:#fff;font-size:17px;font-weight:bold;margin-bottom:12px;">محادثات العملاء النشطة</h3><div style="color:#8b949e;font-size:12px;margin-bottom:15px;">اختر أي مستخدم أدناه لفتح محادثته الخاصة والرد عليه مباشرة:</div><div id="adminCustomerChatsContainer" style="display:flex;flex-direction:column;gap:10px;"></div></div>
+<div id="normalUserMessagesBox" style="display:block;"><p style="color:#8b949e;font-size:13px;">لا توجد رسائل جديدة حالياً.</p></div>
+</div>
+</div>
+
+<div id="profilePage" class="page-section">
+<div style="max-width:92%;margin:30px auto;background:#090c10;border:1px solid #1c2634;border-radius:25px;padding:30px 20px;box-shadow:0 4px 25px rgba(0,0,0,0.8);text-align:right;" dir="rtl">
+<div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:25px;border-bottom:1px solid #162230;padding-bottom:20px;"><div><div style="display:flex;align-items:center;gap:8px;margin-bottom:5px;"><h2 style="color:var(--cyan);font-size:22px;font-weight:900;">الملف الشخصي</h2></div><div id="profileUserName" style="color:#fff;font-size:20px;font-weight:bold;">زائر MAESTRO SHOP</div></div><div style="width:70px;height:70px;border-radius:16px;overflow:hidden;border:1px solid var(--cyan);flex-shrink:0;cursor:pointer;" onclick="openLightBox(currentLogo)"><img class="fr3on-logo" style="width:100%;height:100%;object-fit:cover;" alt="Profile"></div></div>
+<div style="background:#071418;border:1px solid #162230;border-radius:16px;padding:16px 18px;display:flex;align-items:center;justify-content:space-between;margin-bottom:25px;"><div id="profileUserEmail" style="color:#fff;font-size:14px;direction:ltr;"></div><div style="color:#8b949e;font-size:14px;">البريد الإلكتروني <i class="fa-regular fa-envelope" style="color:var(--cyan);"></i></div></div>
+<div id="masterAdminPanel" style="display:none;background:#071418;border:2px solid #008e95;border-radius:20px;padding:22px;margin-bottom:25px;">
+<h3 style="color:var(--cyan);font-size:18px;font-weight:900;margin-bottom:8px;"><i class="fa-solid fa-toolbox"></i> لوحة تحكم المطور الشاملة</h3>
+
+<div class="admin-section-title">🎨 ألوان الموقع</div>
+<div style="display:flex; gap:10px; margin-bottom:15px;">
+    <div><label style="color:#8b949e;font-size:11px;">اللون الأساسي</label><br><input type="color" id="adminColorPrimary" style="width:100%;height:40px;border:0;border-radius:8px;cursor:pointer;" onchange="saveSiteColors()"></div>
+    <div><label style="color:#8b949e;font-size:11px;">الخلفية</label><br><input type="color" id="adminColorBg" style="width:100%;height:40px;border:0;border-radius:8px;cursor:pointer;" onchange="saveSiteColors()"></div>
+    <div><label style="color:#8b949e;font-size:11px;">اللون الثانوي</label><br><input type="color" id="adminColorSecondary" style="width:100%;height:40px;border:0;border-radius:8px;cursor:pointer;" onchange="saveSiteColors()"></div>
+</div>
+
+<div class="admin-section-title">الهوية والشعار</div>
+<div style="margin-bottom:15px;"><label style="color:#8b949e;font-size:12px;display:block;margin-bottom:5px;">صورة شعار المتجر (اللوجو)</label><div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;"><input type="text" id="customLogoInput" class="admin-input" style="flex-grow:1;margin-bottom:0;" dir="ltr"><button onclick="saveCustomLogoUrl()" class="admin-btn" style="margin-bottom:0;">تثبيت 🖼️</button></div></div>
+<div style="margin-bottom:15px;"><label style="color:#8b949e;font-size:12px;display:block;margin-bottom:5px;">اسم المتجر</label><input type="text" id="adminStoreNameInput" class="admin-input"><button onclick="saveStoreIdentity()" class="admin-btn">حفظ الاسم</button></div>
+<div class="admin-section-title">النصوص الأساسية</div>
+<div style="margin-bottom:15px;"><label style="color:#8b949e;font-size:12px;display:block;margin-bottom:5px;">وصف المتجر</label><textarea id="adminHeroDescInput" class="admin-input" rows="2"></textarea></div>
+<div style="margin-bottom:15px;"><label style="color:#8b949e;font-size:12px;display:block;margin-bottom:5px;">نص التحذير</label><textarea id="adminWarningInput" class="admin-input" rows="3"></textarea><button onclick="saveSiteTexts()" class="admin-btn">حفظ النصوص</button></div>
+<div class="admin-section-title">تيليجرام</div>
+<div style="margin-bottom:15px;display:flex;flex-direction:column;gap:8px;"><input type="text" id="adminTelegramUser" class="admin-input" placeholder="@Medo" style="margin-bottom:0;"><input type="text" id="adminTelegramLink" class="admin-input" placeholder="الرابط" style="margin-bottom:0;" dir="ltr"><button onclick="saveTelegramChanges()" class="admin-btn">حفظ التيليجرام</button></div>
+<div class="admin-section-title">إدارة قنوات التواصل</div>
+<div id="adminChannelsEditorContainer" style="display:flex;flex-direction:column;gap:10px;max-height:250px;overflow-y:auto;margin-bottom:10px;"></div>
+<div style="display:flex;gap:10px;"><button onclick="addNewChannelItem()" class="admin-btn" style="flex:1;background:#006b72;color:#fff;">+ إضافة</button><button onclick="saveChannelsChanges()" class="admin-btn" style="flex:1;">حفظ</button></div>
+<div class="admin-section-title">إدارة أرقام الدعم</div>
+<div id="adminPhonesEditorContainer" style="display:flex;flex-direction:column;gap:10px;max-height:250px;overflow-y:auto;margin-bottom:10px;"></div>
+<div style="display:flex;gap:10px;"><button onclick="addNewPhoneItem()" class="admin-btn" style="flex:1;background:#006b72;color:#fff;">+ إضافة</button><button onclick="savePhonesChanges()" class="admin-btn" style="flex:1;">حفظ</button></div>
+<div class="admin-section-title">🎮 إدارة الألعاب والأسعار</div>
+<div id="adminGamesEditorContainer" style="display:flex;flex-direction:column;gap:10px;max-height:250px;overflow-y:auto;margin-bottom:10px;"></div>
+<div style="display:flex;gap:10px;"><button onclick="addNewGameItem()" class="admin-btn" style="flex:1;background:#006b72;color:#fff;">+ إضافة لعبة</button><button onclick="saveGamesChanges()" class="admin-btn" style="flex:1;">حفظ الألعاب</button></div>
+<div class="admin-section-title">📱 إدارة التطبيقات</div>
+<div id="adminAppsEditorContainer" style="display:flex;flex-direction:column;gap:10px;max-height:250px;overflow-y:auto;margin-bottom:10px;"></div>
+<div style="display:flex;gap:10px;"><button onclick="addNewAppItem()" class="admin-btn" style="flex:1;background:#006b72;color:#fff;">+ إضافة تطبيق</button><button onclick="saveAppsChanges()" class="admin-btn" style="flex:1;">حفظ التطبيقات</button></div>
+</div>
+<button onclick="logout()" style="background:#ff4d4d;color:#fff;border:0;border-radius:25px;padding:10px 20px;font-weight:bold;cursor:pointer;">تسجيل الخروج</button>
+</div>
+</div>
+
+<div id="rechargePage" class="page-section" data-rc-theme="dark" style="background: #0d1117; color: #fff; padding: 20px;">
+    <div class="rc-header">
+        <div class="logo" style="color: #00f5f7;"><i class="fa-solid fa-gamepad"></i><span>شحن الألعاب</span></div>
+        <button class="btn-theme" onclick="toggleRechargeTheme()" style="background: #161b22; color: #fff; border: 1px solid #30363d; padding: 8px 12px; border-radius: 8px; cursor: pointer;"><i class="fa-solid fa-moon"></i></button>
+    </div>
+    
+    <div class="banner" style="background: linear-gradient(135deg, #1f2937, #111827); border-radius: 15px; padding: 15px; margin-bottom: 20px; display: flex; justify-content: space-between; align-items: center;">
+        <div><h2 style="font-size: 18px; margin: 0;">شحن فوري وآمن</h2><p style="font-size: 12px; color: #9ca3af; margin: 5px 0 0 0;">اختر باقتك المفضلة</p></div>
+        <i class="fa-solid fa-gem" style="font-size: 30px; color: #00f5f7;"></i>
+    </div>
+
+    <div style="margin-bottom: 20px;">
+        <h3 style="font-size: 16px; margin-bottom: 10px;">اختر اللعبة</h3>
+        <div class="games-grid" id="rechargeGamesGrid" style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px;"></div>
+    </div>
+
+    <div style="margin-bottom: 20px;">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">
+            <h3 style="font-size: 16px; margin: 0;">الباقات المتاحة</h3>
+            <!-- زرار المطور لتعديل الباقات -->
+            <button id="adminEditPackagesBtn" onclick="openAdminPackagesModal()" style="display:none; background: #f59e0b; color: #000; border: none; padding: 6px 12px; border-radius: 8px; font-weight: bold; cursor: pointer; font-size: 12px;"><i class="fa-solid fa-pen"></i> تعديل الباقات</button>
+        </div>
+        <div class="packages-grid" id="rechargePackagesContainer" style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px;"></div>
+    </div>
+</div>
+
+<!-- صفحة تفاصيل الشحن الاحترافية -->
+<div id="checkoutPage" class="page-section" style="background: #0d1117; color: #fff; padding: 20px; min-height: 100vh; padding-bottom: 100px;">
+    
+    <!-- هيدر الصفحة -->
+    <div style="display: flex; align-items: center; gap: 15px; margin-bottom: 25px;">
+        <button onclick="switchPage('rechargePage')" style="background: #1a1d24; border: 1px solid #30363d; color: #fff; width: 40px; height: 40px; border-radius: 12px; font-size: 18px; cursor: pointer;"><i class="fa-solid fa-arrow-right"></i></button>
+        <h2 style="font-size: 20px; font-weight: 900; margin: 0;">إتمام الطلب</h2>
+    </div>
+
+    <!-- بيانات الحساب -->
+    <div style="background: #1a1d24; border: 1px solid #30363d; border-radius: 16px; padding: 20px; margin-bottom: 20px;">
+        <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 10px;">
+            <div style="background: #00ff00; color: #000; width: 24px; height: 24px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 12px;">1</div>
+            <h3 style="font-size: 16px; font-weight: bold; margin: 0;">بيانات حسابك</h3>
+        </div>
+        <p style="color: #8b949e; font-size: 12px; margin-bottom: 15px;">الشحن يصل إلى هذا الحساب مباشرة، فراجع البيانات قبل المتابعة.</p>
+
+        <!-- اختيار طريقة الشحن -->
+        <div id="checkoutMethodSelection" style="display: flex; gap: 10px; margin-bottom: 15px;">
+            <div onclick="selectCheckoutMethod('id')" id="method_id" style="flex: 1; background: #161b22; border: 2px solid #00f5f7; border-radius: 12px; padding: 15px; text-align: center; cursor: pointer; transition: 0.2s;">
+                <i class="fa-solid fa-id-card" style="font-size: 24px; color: #00f5f7; margin-bottom: 8px;"></i>
+                <div style="color: #fff; font-size: 13px; font-weight: bold;">الشحن عن طريق الآيدي</div>
+            </div>
+            <div onclick="selectCheckoutMethod('account')" id="method_account" style="flex: 1; background: #161b22; border: 2px solid #30363d; border-radius: 12px; padding: 15px; text-align: center; cursor: pointer; transition: 0.2s;">
+                <i class="fa-solid fa-user-shield" style="font-size: 24px; color: #f59e0b; margin-bottom: 8px;"></i>
+                <div style="color: #fff; font-size: 13px; font-weight: bold;">الشحن عن طريق الحساب</div>
+            </div>
+        </div>
+
+        <!-- محتوى الآيدي -->
+        <div id="checkoutIdContent" style="display: block;">
+            <label style="display: block; color: #fff; font-size: 13px; font-weight: bold; margin-bottom: 8px;">Player ID <span style="color: red;">*</span></label>
+            <div style="display: flex; gap: 10px;">
+                <input type="text" id="checkoutPlayerId" placeholder="أدخل معرف اللاعب" style="flex-grow: 1; background: #000; border: 1px solid #30363d; border-radius: 10px; padding: 12px 15px; color: #fff; font-size: 14px; outline: none;">
+                <button onclick="showNotification('سيتم إضافة ميزة التحقق قريباً!', 'error')" style="background: #1b3a1b; color: #00ff00; border: 1px solid #00ff00; border-radius: 10px; padding: 0 15px; font-weight: bold; font-size: 13px; cursor: pointer;">تحقق</button>
+            </div>
+        </div>
+
+        <!-- محتوى الحساب -->
+        <div id="checkoutAccountContent" style="display: none;">
+            <label style="display: block; color: #fff; font-size: 13px; font-weight: bold; margin-bottom: 8px;">اختر نوع الربط</label>
+            <select id="checkoutPlatform" style="width: 100%; background: #000; border: 1px solid #30363d; border-radius: 10px; padding: 12px 15px; color: #fff; font-size: 14px; outline: none; margin-bottom: 10px;">
+                <option value="google">جوجل (Google)</option>
+                <option value="facebook">فيسبوك (Facebook)</option>
+                <option value="twitter">تويتر (Twitter)</option>
+            </select>
+            
+            <label style="display: block; color: #fff; font-size: 13px; font-weight: bold; margin-bottom: 8px;">بيانات الحساب (إيميل / رقم / يوزر)</label>
+            <input type="text" id="checkoutAccountData" placeholder="أدخل بيانات الحساب" style="width: 100%; background: #000; border: 1px solid #30363d; border-radius: 10px; padding: 12px 15px; color: #fff; font-size: 14px; outline: none; margin-bottom: 10px;" dir="ltr">
+            
+            <label style="display: block; color: #fff; font-size: 13px; font-weight: bold; margin-bottom: 8px;">كلمة السر</label>
+            <input type="password" id="checkoutAccountPassword" placeholder="أدخل كلمة السر" style="width: 100%; background: #000; border: 1px solid #30363d; border-radius: 10px; padding: 12px 15px; color: #fff; font-size: 14px; outline: none; margin-bottom: 10px;" dir="ltr">
+        </div>
+    </div>
+
+    <!-- ملخص الطلب -->
+    <div style="background: #1a1d24; border: 1px solid #30363d; border-radius: 16px; padding: 20px; margin-bottom: 20px;">
+        <h3 style="font-size: 16px; font-weight: bold; margin-bottom: 15px;">ملخص الطلب</h3>
+        
+        <div style="display: flex; justify-content: space-between; margin-bottom: 10px;">
+            <span style="color: #8b949e; font-size: 14px;" id="checkoutPackageName">100+10 Diamonds</span>
+            <span style="color: #fff; font-size: 14px; font-weight: bold;" id="checkoutPackagePrice">61.00 ج.م</span>
+        </div>
+        
+        <div style="display: flex; justify-content: space-between; margin-bottom: 15px; padding-bottom: 15px; border-bottom: 1px dashed #30363d;">
+            <span style="color: #8b949e; font-size: 14px;">الخصم</span>
+            <span style="color: #8b949e; font-size: 14px;">-</span>
+        </div>
+        
+        <div style="display: flex; justify-content: space-between; align-items: center;">
+            <span style="color: #fff; font-size: 16px; font-weight: bold;">الإجمالي</span>
+            <span style="color: #00ff00; font-size: 20px; font-weight: bold;" id="checkoutTotalPrice">61.00 ج.م</span>
+        </div>
+    </div>
+
+    <!-- طرق الدفع -->
+    <div style="background: #1a1d24; border: 1px solid #30363d; border-radius: 16px; padding: 20px; margin-bottom: 20px;">
+        <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 10px;">
+            <div style="background: #00ff00; color: #000; width: 24px; height: 24px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 12px;">2</div>
+            <h3 style="font-size: 16px; font-weight: bold; margin: 0;">طرق الدفع</h3>
+        </div>
+        <p style="color: #8b949e; font-size: 12px; margin-bottom: 15px;">قم بالتحويل على أحد الأرقام التالية ثم أرسل لنا صورة التحويل على الواتساب.</p>
+        
+        <div style="display: flex; gap: 10px; margin-bottom: 15px;">
+            <div onclick="selectPayment('vodafone')" id="pay_vodafone" style="flex: 1; background: #161b22; border: 2px solid #30363d; border-radius: 12px; padding: 15px; text-align: center; cursor: pointer; transition: 0.2s;">
+                <i class="fa-solid fa-phone" style="font-size: 24px; color: #ff4d4d; margin-bottom: 8px;"></i>
+                <div style="color: #fff; font-size: 13px; font-weight: bold;">فودافون كاش</div>
+                <div style="color: #8b949e; font-size: 11px; margin-top: 5px;">01032329206</div>
+            </div>
+            <div onclick="selectPayment('instapay')" id="pay_instapay" style="flex: 1; background: #161b22; border: 2px solid #30363d; border-radius: 12px; padding: 15px; text-align: center; cursor: pointer; transition: 0.2s;">
+                <i class="fa-solid fa-building-columns" style="font-size: 24px; color: #a855f7; margin-bottom: 8px;"></i>
+                <div style="color: #fff; font-size: 13px; font-weight: bold;">إنستاباي</div>
+                <div style="color: #8b949e; font-size: 11px; margin-top: 5px;">01032329206</div>
+            </div>
+        </div>
+
+        <!-- بيانات التحويل (تظهر بعد اختيار طريقة الدفع) -->
+        <div id="transferDetailsSection" style="display: none; margin-top: 20px; padding-top: 20px; border-top: 1px dashed #30363d;">
+            <label style="display: block; color: #fff; font-size: 13px; font-weight: bold; margin-bottom: 8px;">الرقم الذي تم التحويل منه <span style="color: red;">*</span></label>
+            <input type="text" id="checkoutSenderNumber" placeholder="أدخل رقم المحفظة أو الحساب" style="width: 100%; background: #000; border: 1px solid #30363d; border-radius: 10px; padding: 12px 15px; color: #fff; font-size: 14px; outline: none; margin-bottom: 15px;">
+            
+            <label style="display: block; color: #fff; font-size: 13px; font-weight: bold; margin-bottom: 8px;">صورة إثبات التحويل <span style="color: red;">*</span></label>
+            <div onclick="document.getElementById('checkoutTransferImage').click()" style="background: #000; border: 1px dashed #00f5f7; border-radius: 10px; padding: 20px; text-align: center; cursor: pointer;">
+                <i class="fa-solid fa-cloud-arrow-up" style="font-size: 24px; color: #00f5f7; margin-bottom: 8px;"></i>
+                <div style="color: #8b949e; font-size: 12px;" id="checkoutImageName">اضغط لاختيار صورة الإثبات</div>
+                <input type="file" id="checkoutTransferImage" accept="image/*" style="display: none;" onchange="handleCheckoutImage(event)">
+            </div>
+        </div>
+    </div>
+
+    <!-- طريقة الاستخدام -->
+    <div style="background: #1a1d24; border: 1px solid #30363d; border-radius: 16px; padding: 20px; margin-bottom: 25px;">
+        <div style="display: flex; gap: 20px; border-bottom: 1px solid #30363d; padding-bottom: 10px; margin-bottom: 15px;">
+            <span style="color: #00ff00; font-weight: bold; font-size: 14px; border-bottom: 2px solid #00ff00; padding-bottom: 10px;">طريقة الاستخدام</span>
+            <span style="color: #8b949e; font-weight: bold; font-size: 14px;">الوصف</span>
+            <span style="color: #8b949e; font-weight: bold; font-size: 14px;">التقييمات</span>
+        </div>
+        <h4 style="color: #00ff00; font-size: 15px; font-weight: bold; margin-bottom: 10px; text-align: center;">طريقة الشحن على MAESTRO 🚀</h4>
+        <p style="color: #c9d1d9; font-size: 13px; line-height: 1.7; text-align: center;">يتم شحن الجواهر في حسابك عبر الـ Player ID الخاص بك مباشرة. لا حاجة لمشاركة كلمة المرور.</p>
+        
+        <div style="margin-top: 15px;">
+            <h5 style="color: #fff; font-size: 14px; font-weight: bold; margin-bottom: 8px;">خطوات الطلب:</h5>
+            <ul style="color: #8b949e; font-size: 13px; line-height: 1.8; padding-right: 20px;">
+                <li>اختر الباقة المناسبة من الموقع.</li>
+                <li>أدخل Player ID الخاص بحسابك.</li>
+                <li>راجع البيانات قبل تأكيد الطلب.</li>
+                <li>أتمم عملية الدفع (فودافون كاش / إنستاباي).</li>
+                <li>بعد إتمام الدفع، سيتم الشحن خلال ثوانٍ إلى دقائق.</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- زرار تأكيد الطلب -->
+    <button id="submitOrderBtn" onclick="submitCheckoutOrder()" style="width: 100%; background: #00f5f7; color: #000; padding: 16px; border-radius: 15px; font-size: 18px; font-weight: 900; border: none; cursor: pointer; box-shadow: 0 0 20px rgba(0,245,247,0.3);"><i class="fa-solid fa-paper-plane"></i> تأكيد وإرسال الطلب</button>
+
+</div>
+
+<!-- نافذة تعديل الباقات للمطور -->
+<div id="adminPackagesModal" class="category-modal" onclick="closeAdminPackagesModal(event)" style="z-index: 8000;">
+    <div class="category-content" onclick="event.stopPropagation()" style="max-width: 500px; width: 95%; background: #0d1117; border: 1px solid #30363d;">
+        <h3 style="color: #00f5f7; text-align: center; margin-bottom: 15px;">تعديل باقات <span id="adminPackageGameTitle"></span></h3>
+        <div id="adminPackagesEditorContainer" style="max-height: 50vh; overflow-y: auto; padding-right: 5px;"></div>
+        <div style="display: flex; gap: 10px; margin-top: 15px;">
+            <button onclick="addNewPackageItem()" style="flex: 1; background: #006b72; color: #fff; border: none; padding: 10px; border-radius: 10px; font-weight: bold; cursor: pointer;">+ إضافة باقة</button>
+            <button onclick="saveAdminPackages()" style="flex: 1; background: #00f5f7; color: #000; border: none; padding: 10px; border-radius: 10px; font-weight: bold; cursor: pointer;">حفظ الباقات</button>
+        </div>
+        <button onclick="closeAdminPackagesModal()" style="width: 100%; margin-top: 10px; background: #ff4d4d; color: #fff; border: none; padding: 10px; border-radius: 10px; font-weight: bold; cursor: pointer;">إغلاق</button>
+    </div>
+</div>
+
+<div id="storePage" class="page-section">
+    <div class="st-header">
+        <div class="st-logo">MAESTRO</div>
+        <div class="st-icons">
+            <!-- زرار الدولة الوحيد -->
+            <div class="st-icon-btn" onclick="openCountryModal('store')" id="storeCountryBtn" style="width:auto;padding:0 15px;display:flex;align-items:center;gap:8px;font-weight:bold;color:#fff;height:40px;border-radius:12px;">
+                <span id="storeFlag" style="font-size:20px;">🇪🇬</span>
+                <span id="storeCountryName" style="font-size:14px;">مصر</span>
+                <i class="fa-solid fa-chevron-down" style="font-size:12px;color:#8b949e;"></i>
+            </div>
+        </div>
+    </div>
+
+    <div class="st-hero-text">
+        <h2>اشحن كل ما ترغب فيه</h2>
+        <p>أدخل اسم اللعبة أو البطاقة، والتسليم فوري.</p>
+    </div>
+
+    <div class="st-search">
+        <input type="text" placeholder="ابحث عن لعبة أو بطاقة...">
+        <button class="st-search-btn"><i class="fa-solid fa-magnifying-glass"></i></button>
+    </div>
+
+    <div class="st-tags">
+        <div class="st-tag active">الأكثر بحثاً</div>
+        <div class="st-tag">free fire</div>
+        <div class="st-tag">blood strike</div>
+        <div class="st-tag">فري فاير</div>
+        <div class="st-tag">ببجي</div>
+        <div class="st-tag">روبلوكس</div>
+    </div>
+
+    <div class="st-banner">
+        <h3>جديد على MAESTRO</h3>
+        <p>ألعابك المفضلة وصلت!<br>STEAM + PLAYSTATION</p>
+        <button class="st-banner-btn">اكتشف الألعاب الآن</button>
+    </div>
+
+    <div class="st-section-title">
+        <h3>الأكثر مبيعاً</h3>
+        <a href="#">عرض الكل <i class="fa-solid fa-chevron-left" style="font-size:10px;"></i></a>
+    </div>
+
+    <!-- شبكة الألعاب (تتولد تلقائياً) -->
+    <div class="st-games-grid" id="dynamicGamesGrid"></div>
+
+    <button class="btn-show-more" id="btnShowMore" onclick="toggleMoreGames()">عرض المزيد من الألعاب <i class="fa-solid fa-chevron-down" style="margin-right: 5px;"></i></button>
+
+    <div id="moreGamesSection">
+        <div class="st-games-grid" id="dynamicMoreGamesGrid"></div>
+    </div>
+
+    <div class="st-section-title" style="margin-top: 30px;">
+        <h3>التطبيقات</h3>
+    </div>
+
+    <!-- شبكة التطبيقات (تتولد تلقائياً) -->
+    <div class="st-apps-grid" id="dynamicAppsGrid"></div>
+</div>
+
+<div id="loginPage" class="page-section">
+<div style="max-width:92%;margin:30px auto;background:#090c10;border:1px solid #1c2634;border-radius:25px;padding:30px 20px;text-align:right;" dir="rtl">
+<div style="text-align:center;margin-bottom:25px;"><h2 style="color:#ffffff;font-size:26px;font-weight:900;margin-bottom:8px;">تسجيل الدخول</h2><p style="color:#8b949e;font-size:13.5px;">أهلاً بك مجدداً في MAESTRO SHOP</p></div>
+<div style="display:flex;flex-direction:column;gap:20px;">
+<div><label style="display:block;color:#8b949e;font-size:13px;margin-bottom:8px;font-weight:bold;">البريد الإلكتروني</label><div style="background:#071418;border:1px solid #1c2634;border-radius:14px;padding:14px 16px;display:flex;align-items:center;gap:12px;"><input type="text" id="loginEmailInput" placeholder="البريد الإلكتروني" style="width:100%;background:transparent;border:0;outline:0;color:white;font-size:13.5px;" dir="ltr"></div></div>
+<div><label style="display:block;color:#8b949e;font-size:13px;margin-bottom:8px;font-weight:bold;">كلمة المرور</label><div style="background:#071418;border:1px solid #1c2634;border-radius:14px;padding:14px 16px;display:flex;align-items:center;gap:12px;"><input type="password" id="loginPasswordInput" placeholder="••••••••" style="width:100%;background:transparent;border:0;outline:0;color:white;font-size:14px;" dir="ltr"></div></div>
+<button onclick="loginSuccess()" style="background:var(--cyan);color:var(--site-bg);border:0;border-radius:35px;padding:15px;font-weight:900;font-size:16px;cursor:pointer;">دخول</button>
+<div style="text-align:center;margin-top:10px;"><a href="#" onclick="switchPage('registerPage', event); updateNavById('navRegister');" style="color:var(--cyan);font-size:13.5px;font-weight:bold;text-decoration:none;">أنشئ حساباً جديداً</a></div>
+</div>
+</div>
+</div>
+
+<div id="registerPage" class="page-section">
+<div style="max-width:92%;margin:25px auto;background:#090c10;border:1px solid #1c2634;border-radius:25px;padding:30px 20px;box-shadow:0 4px 25px rgba(0,0,0,0.8);text-align:right;" dir="rtl">
+<div style="display:flex;justify-content:center;margin-bottom:20px;"><div style="width:70px;height:70px;background:#071418;border:1px solid rgba(0,245,247,0.4);border-radius:20px;display:flex;align-items:center;justify-content:center;color:var(--cyan);font-size:28px;box-shadow:0 0 20px rgba(0,245,247,0.2);"><i class="fa-solid fa-user-plus"></i></div></div>
+<div style="text-align:center;margin-bottom:20px;"><h2 style="color:#ffffff;font-size:24px;font-weight:900;margin-bottom:6px;">إنشاء حساب جديد</h2><p style="color:#8b949e;font-size:13px;">انضم لمجتمع MAESTRO SHOP الآن</p></div>
+<div style="display:flex;flex-direction:column;gap:16px;">
+<div><div style="background:#071418;border:1px solid #1c2634;border-radius:14px;padding:12px 16px;display:flex;align-items:center;gap:12px;"><input type="text" id="regNameInput" placeholder="الاسم بالكامل" style="width:100%;background:transparent;border:0;outline:0;color:white;font-size:14px;" dir="rtl"><i class="fa-regular fa-user" style="color:#8b949e;font-size:16px;"></i></div></div>
+<div><div style="background:#071418;border:1px solid #1c2634;border-radius:14px;padding:12px 16px;display:flex;align-items:center;gap:12px;"><input type="text" id="regEmailInput" placeholder="البريد الإلكتروني أو رقم الهاتف" style="width:100%;background:transparent;border:0;outline:0;color:white;font-size:14px;" dir="rtl"><i class="fa-regular fa-envelope" style="color:#8b949e;font-size:16px;"></i></div></div>
+<div><div style="background:#071418;border:1px solid #1c2634;border-radius:14px;padding:12px 16px;display:flex;align-items:center;gap:12px;"><input type="password" id="regPasswordInput" placeholder="كلمة المرور" style="width:100%;background:transparent;border:0;outline:0;color:white;font-size:14px;" dir="rtl"><i class="fa-solid fa-lock" style="color:#8b949e;font-size:16px;"></i></div></div>
+<div><div style="background:#071418;border:1px solid #1c2634;border-radius:14px;padding:12px 16px;display:flex;align-items:center;gap:12px;"><input type="password" id="regConfirmPasswordInput" placeholder="تأكيد كلمة المرور" style="width:100%;background:transparent;border:0;outline:0;color:white;font-size:14px;" dir="rtl"><i class="fa-solid fa-lock" style="color:#8b949e;font-size:16px;"></i></div></div>
+<button onclick="registerSuccess()" style="background:var(--cyan);color:var(--site-bg);border:0;border-radius:35px;padding:15px;font-weight:900;font-size:16px;cursor:pointer;margin-top:5px;">إنشاء حساب</button>
+<div style="text-align:center;margin-top:10px;"><span style="color:#8b949e;font-size:13.5px;">لديك حساب بالفعل؟ </span><a href="#" onclick="switchPage('loginPage', event); updateNavById('navLogin');" style="color:var(--cyan);font-size:13.5px;font-weight:bold;text-decoration:none;">سجل دخولك</a></div>
+</div>
+</div>
+</div>
+
+<div id="supportChatModal" style="display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:#000;z-index:5000;flex-direction:column;" dir="rtl">
+<div style="height:70px;background:#000;border-bottom:1px solid #123036;display:flex;align-items:center;justify-content:space-between;padding:0 20px;">
+<div style="display:flex;align-items:center;gap:12px;"><div style="width:45px;height:45px;border-radius:12px;overflow:hidden;border:1px solid var(--cyan);"><img class="fr3on-logo" style="width:100%;height:100%;object-fit:cover;" alt="Admin"></div><div><div id="chatHeaderTitle" style="color:#fff;font-size:16px;font-weight:bold;">إدارة MAESTRO SHOP (الدعم)</div><div style="color:var(--cyan);font-size:11.5px;display:flex;align-items:center;gap:5px;"><span style="width:7px;height:7px;background:var(--cyan);border-radius:50%;"></span> محادثة خاصة</div></div></div>
+<div onclick="closeSupportChat()" style="color:var(--cyan);font-size:20px;cursor:pointer;width:40px;height:40px;display:flex;align-items:center;justify-content:center;background:#0b1018;border-radius:50%;border:1px solid #1c2634;"><i class="fa-solid fa-arrow-right"></i></div>
+</div>
+<div id="chatMessagesContainer" style="flex-grow:1;padding:20px;overflow-y:auto;display:flex;flex-direction:column;gap:15px;background:#000;"></div>
+<div style="padding:12px 20px;background:#000;border-top:1px solid #123036;display:flex;align-items:center;gap:12px;">
+<div onclick="document.getElementById('chatFileInput').click()" style="color:#8b949e;font-size:20px;cursor:pointer;padding:10px;"><i class="fa-solid fa-paperclip"></i></div>
+<input type="file" id="chatFileInput" accept="image/*" style="display:none;" onchange="sendChatImage(event)">
+<div style="flex-grow:1;background:#090c10;border:1px solid #1c2634;border-radius:25px;padding:4px 18px;display:flex;align-items:center;"><input type="text" id="chatInputText" placeholder="اكتب رسالة..." onkeypress="checkChatEnter(event)" style="width:100%;background:transparent;border:0;outline:0;color:#fff;font-size:14px;padding:8px 0;" dir="rtl"></div>
+<div onclick="sendUserChatMessage()" style="width:45px;height:45px;background:#0b2226;border:1px solid rgba(0,245,247,0.4);border-radius:50%;display:flex;align-items:center;justify-content:center;color:var(--cyan);cursor:pointer;"><i class="fa-solid fa-paper-plane"></i></div>
+</div>
+</div>
+
+<div id="commentsModal" style="display:none;position:fixed;bottom:0;left:0;width:100%;height:80vh;background:#090c10;border-top:1px solid #1c2634;border-radius:25px 25px 0 0;z-index:6000;flex-direction:column;box-shadow:0 -10px 30px rgba(0,0,0,0.9);" dir="rtl">
+<div style="display:flex;flex-direction:column;align-items:center;padding:12px;border-bottom:1px solid #161b22;position:relative;"><div style="width:40px;height:4px;background:#30363d;border-radius:2px;margin-bottom:10px;"></div><div style="display:flex;justify-content:space-between;align-items:center;width:100%;padding:0 15px;"><div style="display:flex;align-items:center;gap:8px;"><span id="commentsCountBadge" style="background:#0b1f24;color:var(--cyan);font-size:12px;padding:2px 10px;border-radius:12px;border:1px solid rgba(0,245,247,0.3);">1</span><h3 style="color:#fff;font-size:18px;font-weight:bold;">التعليقات</h3><i class="fa-regular fa-comment" style="color:var(--cyan);"></i></div><div onclick="closeCommentsModal()" style="color:#8b949e;font-size:18px;cursor:pointer;width:32px;height:32px;background:#161b22;border-radius:50%;display:flex;align-items:center;justify-content:center;"><i class="fa-solid fa-xmark"></i></div></div></div>
+<div id="commentsListContainer" style="flex-grow:1;padding:15px;overflow-y:auto;display:flex;flex-direction:column;gap:12px;"></div>
+<div style="padding:15px;background:#05080c;border-top:1px solid #161b22;display:flex;align-items:center;gap:10px;"><div style="flex-grow:1;background:#090c10;border:1px solid #1c2634;border-radius:20px;padding:4px 16px;display:flex;align-items:center;"><input type="text" id="newCommentInput" placeholder="اكتب تعليقاً..." onkeypress="checkCommentEnter(event)" style="width:100%;background:transparent;border:0;outline:0;color:#fff;font-size:13.5px;padding:8px 0;" dir="rtl"></div><div onclick="submitNewComment()" style="width:42px;height:42px;background:#0b2226;border:1px solid rgba(0,245,247,0.4);border-radius:50%;display:flex;align-items:center;justify-content:center;color:var(--cyan);cursor:pointer;"><i class="fa-solid fa-paper-plane"></i></div></div>
+</div>
+
+<!-- نافذة الدعم والخيارات الجديدة -->
+<div id="supportOptionsModal" class="support-modal-overlay" onclick="closeSupportOptions(event)">
+    <div class="support-modal-content" onclick="event.stopPropagation()">
+        <div class="support-modal-header">
+            <button class="support-modal-close" onclick="closeSupportOptions()"><i class="fa-solid fa-xmark"></i></button>
+            <h3>تواصل مع الدعم</h3>
+        </div>
+        <a href="#" onclick="closeSupportOptions(); openSupportChat();" class="support-option-btn chat">
+            <i class="fa-solid fa-comments"></i>
+            <div class="text-wrap">
+                <h4>الدردشة على الموقع</h4>
+                <p>نرد عليك هنا مباشرة</p>
+            </div>
+        </a>
+        <a href="https://wa.me/201032329206" target="_blank" class="support-option-btn whatsapp">
+            <i class="fa-brands fa-whatsapp"></i>
+            <div class="text-wrap">
+                <h4>واتساب</h4>
+                <p>كلّمنا على واتساب</p>
+            </div>
+        </a>
+    </div>
+</div>
+
+<div id="countryModal" class="category-modal" onclick="closeCountryModal(event)"><div class="category-content" onclick="event.stopPropagation()"><div style="color:var(--cyan);font-size:16px;font-weight:bold;margin-bottom:12px;text-align:center;">اختر الدولة</div><div style="background:#071418;border:1px solid #006b72;border-radius:12px;padding:10px 14px;display:flex;align-items:center;gap:10px;margin-bottom:15px;"><i class="fa-solid fa-magnifying-glass" style="color:var(--cyan);font-size:14px;"></i><input type="text" id="countrySearchInput" placeholder="ابحث..." onkeyup="filterCountries()" style="width:100%;background:transparent;border:0;outline:0;color:white;font-size:13px;" dir="rtl"></div><div id="countriesListContainer" style="overflow-y:auto;max-height:55vh;"></div></div></div>
+<div id="currencyModal" class="category-modal" onclick="closeCurrencyModal(event)"><div class="category-content" onclick="event.stopPropagation()"><div style="color:var(--cyan);font-size:16px;font-weight:bold;margin-bottom:12px;text-align:center;">اختر العملة</div><div style="background:#071418;border:1px solid #006b72;border-radius:12px;padding:10px 14px;display:flex;align-items:center;gap:10px;margin-bottom:15px;"><i class="fa-solid fa-magnifying-glass" style="color:var(--cyan);font-size:14px;"></i><input type="text" id="currencySearchInput" placeholder="ابحث..." onkeyup="filterCurrencies()" style="width:100%;background:transparent;border:0;outline:0;color:white;font-size:13px;" dir="rtl"></div><div id="currenciesListContainer" style="overflow-y:auto;max-height:55vh;"></div></div></div>
+<div id="imageLightBox" onclick="closeLightBox()"><div class="close-btn" onclick="closeLightBox()"><i class="fa-solid fa-xmark"></i></div><img id="lightBoxImg" src="" alt="صورة مكبرة"></div>
+<div id="filterCategoryModal" class="category-modal" onclick="closeFilterCategoryModal(event)"><div class="category-content" onclick="event.stopPropagation()"><div class="category-option selected" onclick="selectFilterCategory('الكل', this)"><span>الكل</span></div><div class="category-option" onclick="selectFilterCategory('فري فاير', this)"><span>فري فاير</span></div><div class="category-option" onclick="selectFilterCategory('ببجي', this)"><span>ببجي</span></div><div class="category-option" onclick="selectFilterCategory('بيس فيفا و كلاش', this)"><span>بيس فيفا و كلاش</span></div><div class="category-option" onclick="selectFilterCategory('بلود سترايك', this)"><span>بلود سترايك</span></div><div class="category-option" onclick="selectFilterCategory('روبلوكس', this)"><span>روبلوكس</span></div><div class="category-option" onclick="selectFilterCategory('حسابات سوشيال ميديا', this)"><span>حسابات سوشيال ميديا</span></div><div class="category-option" onclick="selectFilterCategory('اخري', this)"><span>اخري</span></div></div></div>
+
+<a href="#" id="floatingChannelBtn" class="floating-channel-btn" onclick="openChannelFromFloating(event)" title="قناة مايسترو"><i class="fa-solid fa-bullhorn"></i></a>
+
+<nav class="bottom-nav" id="bottomNav"></nav><script>
+const ADMIN_EMAIL="konbela.ff.30@gmail.com",ADMIN_PASSWORD="yuiopyuiop";
+const DEFAULT_LOGO="https://i.ibb.co/6P6yKq5J/logo.png",DEFAULT_STORE_NAME="MAESTRO SHOP",DEFAULT_HERO_DESC="وجهة ألعاب بلمسة نيونية، سريعة، ومهيأة لعرض الروابط والتواصل مع مجتمع MAESTRO SHOP.",DEFAULT_WARNING_TEXT="احذر النصب هذه هي الروابط والحسابات الرسمية الوحيدة<br>الخاصة بمتجر MAESTRO SHOP الإدارة غير مسؤولة عن<br>أي تعامل يتم خارج الروابط والحسابات الرسمية.";
+const defaultChannels=[{name:"قناه شحن + عرض + مسابقات",type:"WHATSAPP",desc:"قناة شحن وعروض ومسابقات 🎮",icon:"fa-whatsapp",link:"https://whatsapp.com/channel/0029VbAu2bs5PO0yXbGtBD2S"}];
+const defaultPhones=[{phone:"01032329206",label:"رقم الدعم",link:"https://wa.me/201032329206"}];
+const defaultTelegram={username:"",link:""};
+
+const defaultColors = { primary: '#00f5f7', bg: '#000000', secondary: '#0d0f12' };
+const defaultGamesList = [
+    { name: 'فري فاير', img: 'https://i.ibb.co/cSNRpBPJ/image-1.jpg', type: 'active', key: 'freefire' },
+    { name: 'ببجي موبايل', img: 'https://i.ibb.co/v4666dh2/image-2.jpg', type: 'active', key: 'pubg' },
+    { name: 'فيفا', img: 'https://i.ibb.co/7t97ztpx/image-5.jpg', type: 'active', key: 'fifa' },
+    { name: 'بيس', img: 'https://i.ibb.co/h6Z65fj/image-4.jpg', type: 'active', key: 'pes' },
+    { name: 'روبلوكس', img: 'https://i.ibb.co/kgFtn19Q/FB-IMG-1793074689727.jpg', type: 'maintenance' },
+    { name: 'كول أوف ديوتي', img: 'https://i.ibb.co/hxj7m5sJ/image-3.jpg', type: 'maintenance' },
+    { name: 'فورتنايت', img: 'https://i.ibb.co/zVpHKnGP/image.jpg', type: 'more-maintenance' },
+    { name: 'ماين كرافت', img: 'https://i.ibb.co/4RWjBgkn/image-1.jpg', type: 'more-maintenance' },
+    { name: 'فالورانت', img: 'https://i.ibb.co/21L4C47q/image-2.jpg', type: 'more-maintenance' },
+    { name: 'ليج أوف ليجندز', img: 'https://i.ibb.co/k62zCjtX/image-4.jpg', type: 'more-maintenance' },
+    { name: 'كلاش أوف كلانس', img: 'https://i.ibb.co/0jT8184h/image-3.jpg', type: 'more-maintenance' }
+];
+const defaultAppsList = [
+    { title: 'تيك توك', services: 'شحن عملات + توثيق', img: 'https://i.ibb.co/qMp59PHX/image.jpg' },
+    { title: 'انستجرام', services: 'توثيق', img: 'https://i.ibb.co/vCTp16sz/image.jpg' },
+    { title: 'واتساب', services: 'توثيق', img: 'https://i.ibb.co/HLhbK0ZH/image.jpg' },
+    { title: 'سناب شات', services: 'توثيق', img: 'https://i.ibb.co/PsGJ6d72/image.jpg' },
+    { title: 'فيسبوك', services: 'توثيق', img: 'https://i.ibb.co/0j6p2dMN/image.jpg' },
+    { title: 'سبوتيفاي', services: 'اشتراك', img: 'https://i.ibb.co/WptCqPnJ/image.jpg' },
+    { title: 'نتفليكس', services: 'اشتراك', img: 'https://i.ibb.co/Xx3x9f5m/image.jpg' },
+    { title: 'تويتش', services: 'اشتراك', img: 'https://cdn-icons-png.flaticon.com/512/5968/5968819.png' }
+];
+
+const defaultPackages = {
+    'freefire': [
+        { name: '100+10', price: 15, icon: 'https://cdn-icons-png.flaticon.com/512/822/822143.png' },
+        { name: '210+21', price: 35, icon: 'https://cdn-icons-png.flaticon.com/512/822/822143.png' },
+        { name: '520+52', price: 75, icon: 'https://cdn-icons-png.flaticon.com/512/822/822143.png' },
+        { name: '1060+106', price: 150, icon: 'https://cdn-icons-png.flaticon.com/512/822/822143.png' },
+        { name: '2180+218', price: 300, icon: 'https://cdn-icons-png.flaticon.com/512/822/822143.png' },
+        { name: '5600+560', price: 750, icon: 'https://cdn-icons-png.flaticon.com/512/822/822143.png' },
+        { name: '11000+1100', price: 1400, icon: 'https://cdn-icons-png.flaticon.com/512/822/822143.png' }
+    ],
+    'pubg': [
+        { name: '60 شدة', price: 40, icon: 'https://cdn-icons-png.flaticon.com/512/2583/2583434.png' },
+        { name: '325 شدة', price: 200, icon: 'https://cdn-icons-png.flaticon.com/512/2583/2583434.png' }
+    ]
+};
+
+let currentLogo=localStorage.getItem('medo_site_logo')||DEFAULT_LOGO,currentStoreName=localStorage.getItem('medo_site_store_name')||DEFAULT_STORE_NAME,currentHeroDesc=localStorage.getItem('medo_hero_desc')||DEFAULT_HERO_DESC,currentWarningText=localStorage.getItem('medo_warning_text')||DEFAULT_WARNING_TEXT;
+let siteChannels=JSON.parse(localStorage.getItem('medo_site_channels')||JSON.stringify(defaultChannels)),sitePhones=JSON.parse(localStorage.getItem('medo_site_phones')||JSON.stringify(defaultPhones)),siteTelegram=JSON.parse(localStorage.getItem('medo_site_telegram')||JSON.stringify(defaultTelegram));
+let siteColors=JSON.parse(localStorage.getItem('medo_site_colors')||JSON.stringify(defaultColors));
+let siteGames=JSON.parse(localStorage.getItem('medo_site_games')||JSON.stringify(defaultGamesList));
+let siteApps=JSON.parse(localStorage.getItem('medo_site_apps')||JSON.stringify(defaultAppsList));
+let sitePackages = JSON.parse(localStorage.getItem('medo_site_packages') || JSON.stringify(defaultPackages));
+
+let isLoggedIn=!1,loggedInEmail="",currentUser={name:"زائر MAESTRO SHOP",email:"visitor@medo.com",phone:""},selectedSingleImage="",activeCountryTarget='ad',adminActiveChatKey="",currentActivePostIndex=null;
+
+let rechargeSelectedGameKey = 'freefire';
+let rechargeSelectedPackage = null;
+let currentCheckoutPayment = null;
+let checkoutTransferImageBase64 = "";
+
+function applySiteColors() {
+    document.documentElement.style.setProperty('--site-primary', siteColors.primary);
+    document.documentElement.style.setProperty('--site-bg', siteColors.bg);
+    document.documentElement.style.setProperty('--site-secondary', siteColors.secondary);
+    document.body.style.backgroundColor = siteColors.bg;
+}
+
+function renderDynamicStore() {
+    const mainGrid = document.getElementById('dynamicGamesGrid');
+    const moreGrid = document.getElementById('dynamicMoreGamesGrid');
+    const appsGrid = document.getElementById('dynamicAppsGrid');
+    if(!mainGrid || !appsGrid || !moreGrid) return;
+
+    mainGrid.innerHTML = '';
+    moreGrid.innerHTML = '';
+    appsGrid.innerHTML = '';
+
+    siteGames.forEach(game => {
+        const gameHTML = `
+        <div class="st-game-card" onclick="${game.type === 'active' ? `openRechargeFromStore('${game.name}','${game.key}')` : `showNotification('هذه اللعبة تحت الصيانة حالياً، سيتم توفيرها قريباً!', 'error')`}">
+            <img src="${game.img}" onerror="this.src='https://cdn-icons-png.flaticon.com/512/686/686589.png'" referrerpolicy="no-referrer" alt="${game.name}">
+            <div class="st-game-title">${game.name}</div>
+        </div>`;
+        if (game.type === 'active' || game.type === 'maintenance') mainGrid.innerHTML += gameHTML;
+        else if (game.type === 'more-maintenance') moreGrid.innerHTML += gameHTML;
+    });
+
+    siteApps.forEach(app => {
+        appsGrid.innerHTML += `
+        <div class="st-app-card" onclick="showNotification('هذا التطبيق تحت الصيانة حالياً، سيتم توفيره قريباً!', 'error');">
+            <div class="st-app-img-wrap">
+                <img src="${app.img}" onerror="this.src='https://cdn-icons-png.flaticon.com/512/686/686589.png'" referrerpolicy="no-referrer" alt="${app.title}">
+            </div>
+            <div class="st-app-info">
+                <div class="st-app-title">${app.title}</div>
+                <div class="st-app-services">${app.services}</div>
+            </div>
+        </div>`;
+    });
+}
+
+function renderAdminGamesEditors() {
+    const c = document.getElementById('adminGamesEditorContainer');
+    c.innerHTML = '';
+    siteGames.forEach((game, i) => {
+        c.innerHTML += `
+        <div style="background:#02090c;border:1px solid #006b72;border-radius:12px;padding:10px;display:flex;flex-direction:column;gap:8px;">
+            <input type="text" id="gmName_${i}" value="${game.name}" placeholder="اسم اللعبة" class="admin-input" style="margin-bottom:0;">
+            <input type="text" id="gmImg_${i}" value="${game.img}" placeholder="رابط الصورة" class="admin-input" style="margin-bottom:0;" dir="ltr">
+            <select id="gmType_${i}" class="admin-input" style="margin-bottom:0;">
+                <option value="active" ${game.type === 'active' ? 'selected' : ''}>شغالة (تفتح صفحة الشحن)</option>
+                <option value="maintenance" ${game.type === 'maintenance' ? 'selected' : ''}>تحت الصيانة (رئيسية)</option>
+                <option value="more-maintenance" ${game.type === 'more-maintenance' ? 'selected' : ''}>تحت الصيانة (عرض المزيد)</option>
+            </select>
+            ${game.type === 'active' ? `<input type="text" id="gmKey_${i}" value="${game.key || ''}" placeholder="معرف اللعبة للشحن (freefire, pubg..)" class="admin-input" style="margin-bottom:0;" dir="ltr">` : ''}
+            <button onclick="removeGameItem(${i})" class="admin-btn-danger" style="align-self:flex-start;">حذف</button>
+        </div>`;
+    });
+}
+function addNewGameItem() { siteGames.push({ name: "لعبة جديدة", img: "", type: "maintenance" }); renderAdminGamesEditors(); }
+function removeGameItem(i) { siteGames.splice(i, 1); renderAdminGamesEditors(); }
+function saveGamesChanges() {
+    siteGames = siteGames.map((g, i) => {
+        const type = document.getElementById(`gmType_${i}`).value;
+        return {
+            name: document.getElementById(`gmName_${i}`).value.trim() || 'لعبة',
+            img: document.getElementById(`gmImg_${i}`).value.trim(),
+            type: type,
+            key: type === 'active' ? (document.getElementById(`gmKey_${i}`).value.trim() || 'freefire') : undefined
+        };
+    });
+    localStorage.setItem('medo_site_games', JSON.stringify(siteGames));
+    renderDynamicStore();
+    showNotification('تم حفظ الألعاب بنجاح! 🎮');
+}
+
+function renderAdminAppsEditors() {
+    const c = document.getElementById('adminAppsEditorContainer');
+    c.innerHTML = '';
+    siteApps.forEach((app, i) => {
+        c.innerHTML += `
+        <div style="background:#02090c;border:1px solid #006b72;border-radius:12px;padding:10px;display:flex;flex-direction:column;gap:8px;">
+            <input type="text" id="apTitle_${i}" value="${app.title}" placeholder="اسم التطبيق" class="admin-input" style="margin-bottom:0;">
+            <input type="text" id="apImg_${i}" value="${app.img}" placeholder="رابط الصورة" class="admin-input" style="margin-bottom:0;" dir="ltr">
+            <input type="text" id="apServ_${i}" value="${app.services}" placeholder="الخدمات (توثيق، اشتراك...)" class="admin-input" style="margin-bottom:0;">
+            <button onclick="removeAppItem(${i})" class="admin-btn-danger" style="align-self:flex-start;">حذف</button>
+        </div>`;
+    });
+}
+function addNewAppItem() { siteApps.push({ title: "تطبيق جديد", img: "", services: "توثيق" }); renderAdminAppsEditors(); }
+function removeAppItem(i) { siteApps.splice(i, 1); renderAdminAppsEditors(); }
+function saveAppsChanges() {
+    siteApps = siteApps.map((a, i) => ({
+        title: document.getElementById(`apTitle_${i}`).value.trim() || 'تطبيق',
+        img: document.getElementById(`apImg_${i}`).value.trim(),
+        services: document.getElementById(`apServ_${i}`).value.trim() || 'خدمة'
+    }));
+    localStorage.setItem('medo_site_apps', JSON.stringify(siteApps));
+    renderDynamicStore();
+    showNotification('تم حفظ التطبيقات بنجاح! 📱');
+}
+
+function saveSiteColors() {
+    siteColors.primary = document.getElementById('adminColorPrimary').value;
+    siteColors.bg = document.getElementById('adminColorBg').value;
+    siteColors.secondary = document.getElementById('adminColorSecondary').value;
+    localStorage.setItem('medo_site_colors', JSON.stringify(siteColors));
+    applySiteColors();
+    showNotification('تم حفظ الألوان بنجاح! 🎨');
+}
+
+function toggleMoreGames() {
+    const sec = document.getElementById('moreGamesSection');
+    const btn = document.getElementById('btnShowMore');
+    if (sec.style.display === 'none' || sec.style.display === '') {
+        sec.style.display = 'block';
+        btn.innerHTML = 'عرض أقل <i class="fa-solid fa-chevron-up" style="margin-right: 5px;"></i>';
+    } else {
+        sec.style.display = 'none';
+        btn.innerHTML = 'عرض المزيد من الألعاب <i class="fa-solid fa-chevron-down" style="margin-right: 5px;"></i>';
+        btn.scrollIntoView({behavior: 'smooth', block: 'center'});
+    }
+}
+
+function openSupportOptions() { document.getElementById('supportOptionsModal').classList.add('show'); }
+function closeSupportOptions(e) { if(e && e.target.id !== 'supportOptionsModal') return; document.getElementById('supportOptionsModal').classList.remove('show'); }
+
+function toggleRechargeTheme() {
+    const page = document.getElementById('rechargePage');
+    if (page.getAttribute('data-rc-theme') === 'dark') { page.setAttribute('data-rc-theme', 'light'); page.style.background = '#f8fafc'; page.style.color = '#1e293b'; }
+    else { page.setAttribute('data-rc-theme', 'dark'); page.style.background = '#0d1117'; page.style.color = '#fff'; }
+}
+
+function renderRechargeGames() {
+    const grid = document.getElementById('rechargeGamesGrid');
+    if(!grid) return;
+    grid.innerHTML = '';
+    siteGames.filter(g => g.type === 'active').forEach(game => {
+        grid.innerHTML += `<div class="game-card ${game.key === rechargeSelectedGameKey ? 'active' : ''}" onclick="selectRechargeGame('${game.name}','${game.key}',this)" style="background:#161b22; border:1px solid ${game.key === rechargeSelectedGameKey ? '#00f5f7' : '#30363d'}; border-radius:10px; padding:10px; text-align:center; cursor:pointer;">
+            <img src="${game.img}" style="width:50px; height:50px; object-fit:cover; border-radius:8px; margin-bottom:5px;">
+            <div style="font-size:12px; font-weight:bold; color:#fff;">${game.name}</div>
+        </div>`;
+    });
+    document.getElementById('adminEditPackagesBtn').style.display = isAdmin() ? 'block' : 'none';
+}
+
+function selectRechargeGame(name, key, el) {
+    rechargeSelectedGameKey = key;
+    renderRechargeGames();
+    renderRechargePackages();
+}
+
+function openRechargeFromStore(gameName, key) {
+    switchPage('rechargePage');
+    rechargeSelectedGameKey = key;
+    renderRechargeGames(); 
+    renderRechargePackages();
+}
+
+function renderRechargePackages() {
+    const container = document.getElementById('rechargePackagesContainer');
+    if (!container) return;
+    container.innerHTML = '';
+    const packages = sitePackages[rechargeSelectedGameKey] || [];
+    if(packages.length === 0) {
+        container.innerHTML = '<div style="grid-column: span 2; text-align:center; color:#8b949e;">لا توجد باقات حالياً.</div>';
+        return;
+    }
+    packages.forEach((pkg, index) => {
+        container.innerHTML += `
+        <div class="package-card" onclick="selectPackage(${index}, this)" style="background: #1a1d24; border: 2px solid ${index === 0 ? '#00f5f7' : '#30363d'}; border-radius: 15px; padding: 15px; text-align: center; cursor: pointer; position: relative;">
+            <div style="position:absolute; top:5px; left:5px; color: #00f5f7; font-size: 18px;"><i class="fa-solid fa-gem"></i></div>
+            <div style="font-size: 20px; font-weight: bold; color: #fff; margin-bottom: 5px;">${pkg.name}</div>
+            <div style="font-size: 12px; color: #8b949e; margin-bottom: 10px;">Extra Gem</div>
+            <div style="font-size: 14px; color: #8b949e; margin-bottom: 5px;">السعر:</div>
+            <div style="font-size: 18px; font-weight: bold; color: #f59e0b; margin-bottom: 10px;">${pkg.price} ج.م</div>
+            <div style="background: rgba(0,245,247,0.1); color: #00f5f7; padding: 5px; border-radius: 8px; font-size: 12px; font-weight: bold;">اشحن الآن</div>
+        </div>`;
+        if (index === 0) rechargeSelectedPackage = pkg;
+    });
+}
+
+function selectPackage(index, el) {
+    rechargeSelectedPackage = sitePackages[rechargeSelectedGameKey][index];
+    document.querySelectorAll('#rechargePackagesContainer .package-card').forEach(c => c.style.borderColor = '#30363d');
+    el.style.borderColor = '#00f5f7';
+    
+    document.getElementById('checkoutPackageName').innerText = rechargeSelectedPackage.name + " جواهر";
+    document.getElementById('checkoutPackagePrice').innerText = rechargeSelectedPackage.price + " ج.م";
+    document.getElementById('checkoutTotalPrice').innerText = rechargeSelectedPackage.price + " ج.م";
+    document.getElementById('checkoutPlayerId').value = '';
+    
+    currentCheckoutPayment = null;
+    document.getElementById('pay_vodafone').style.borderColor = '#30363d';
+    document.getElementById('pay_instapay').style.borderColor = '#30363d';
+    document.getElementById('transferDetailsSection').style.display = 'none';
+    document.getElementById('checkoutSenderNumber').value = '';
+    document.getElementById('checkoutImageName').innerHTML = 'اضغط لاختيار صورة الإثبات';
+    checkoutTransferImageBase64 = "";
+    
+    // تصفير اختيار الطريقة (آيدي أو حساب)
+    selectCheckoutMethod('id');
+    document.getElementById('checkoutAccountData').value = '';
+    document.getElementById('checkoutAccountPassword').value = '';
+
+    switchPage('checkoutPage');
+}
+
+function selectCheckoutMethod(method) {
+    if(method === 'id') {
+        document.getElementById('method_id').style.borderColor = '#00f5f7';
+        document.getElementById('method_account').style.borderColor = '#30363d';
+        document.getElementById('checkoutIdContent').style.display = 'block';
+        document.getElementById('checkoutAccountContent').style.display = 'none';
+    } else {
+        document.getElementById('method_id').style.borderColor = '#30363d';
+        document.getElementById('method_account').style.borderColor = '#f59e0b';
+        document.getElementById('checkoutIdContent').style.display = 'none';
+        document.getElementById('checkoutAccountContent').style.display = 'block';
+    }
+}
+
+function selectPayment(method) {
+    currentCheckoutPayment = method;
+    document.getElementById('pay_vodafone').style.borderColor = '#30363d';
+    document.getElementById('pay_instapay').style.borderColor = '#30363d';
+    document.getElementById('pay_' + method).style.borderColor = '#00f5f7';
+    
+    document.getElementById('transferDetailsSection').style.display = 'block';
+}
+
+function handleCheckoutImage(e) {
+    const file = e.target.files[0];
+    if(file) {
+        const reader = new FileReader();
+        reader.onload = function(ev) {
+            checkoutTransferImageBase64 = ev.target.result;
+            document.getElementById('checkoutImageName').innerHTML = `<span style="color:#00ff00;">تم اختيار الصورة بنجاح ✅</span>`;
+        };
+        reader.readAsDataURL(file);
+    }
+}
+
+function submitCheckoutOrder() {
+    const methodId = document.getElementById('method_id').style.borderColor === 'rgb(0, 245, 247)';
+    let orderDetails = "";
+    
+    if(methodId) {
+        const playerId = document.getElementById('checkoutPlayerId').value.trim();
+        if(!playerId) { showNotification('يرجى إدخال الـ Player ID أولاً!', 'error'); return; }
+        orderDetails = `🆔 طريقة الشحن: عن طريق الآيدي\n🆔 الآي دي: ${playerId}`;
+    } else {
+        const platform = document.getElementById('checkoutPlatform').value;
+        const accData = document.getElementById('checkoutAccountData').value.trim();
+        const accPass = document.getElementById('checkoutAccountPassword').value.trim();
+        if(!accData) { showNotification('يرجى إدخال بيانات الحساب!', 'error'); return; }
+        if(!accPass) { showNotification('يرجى إدخال كلمة السر!', 'error'); return; }
+        
+        const platformNames = { 'google': 'جوجل', 'facebook': 'فيسبوك', 'twitter': 'تويتر' };
+        orderDetails = `🔗 طريقة الشحن: عن طريق الحساب\n🌐 الربط: ${platformNames[platform]}\n📝 بيانات الحساب: ${accData}\n🔑 كلمة السر: ${accPass}`;
+    }
+    
+    if(!currentCheckoutPayment) { showNotification('يرجى اختيار طريقة الدفع أولاً!', 'error'); return; }
+    const senderNumber = document.getElementById('checkoutSenderNumber').value.trim();
+    if(!senderNumber) { showNotification('يرجى إدخال الرقم الذي قمت بالتحويل منه!', 'error'); return; }
+    if(!checkoutTransferImageBase64) { showNotification('يرجى رفع صورة إثبات التحويل!', 'error'); return; }
+    
+    const gameName = siteGames.find(g => g.key === rechargeSelectedGameKey)?.name || rechargeSelectedGameKey;
+    const payName = currentCheckoutPayment === 'vodafone' ? 'فودافون كاش' : 'إنستاباي';
+    
+    const orderText = `طلب شحن جديد:\n🎮 اللعبة: ${gameName}\n📦 الباقة: ${rechargeSelectedPackage.name}\n💰 السعر: ${rechargeSelectedPackage.price} ج.م\n\n${orderDetails}\n\n💳 طريقة الدفع: ${payName}\n📱 الرقم المحول منه: ${senderNumber}`;
+    
+    const userKey = isLoggedIn ? loggedInEmail : "visitor_" + (localStorage.getItem('fr3on_visitor_id') || Math.random().toString(36).substring(7));
+    const chatKey = 'fr3on_chat_' + userKey;
+    let chatMessages = JSON.parse(localStorage.getItem(chatKey) || '[]');
+    
+    chatMessages.push({
+        sender: 'user',
+        text: orderText,
+        time: new Date().toLocaleTimeString('ar-EG', {hour:'2-digit', minute:'2-digit'}),
+        type: 'text',
+        reaction: '',
+        isDeleted: false
+    });
+    
+    chatMessages.push({
+        sender: 'user',
+        text: checkoutTransferImageBase64,
+        time: new Date().toLocaleTimeString('ar-EG', {hour:'2-digit', minute:'2-digit'}),
+        type: 'img',
+        reaction: '',
+        isDeleted: false
+    });
+    
+    localStorage.setItem(chatKey, JSON.stringify(chatMessages));
+    
+    let activeChats = JSON.parse(localStorage.getItem('fr3on_active_chats_list') || '[]');
+    if(!activeChats.includes(chatKey)) {
+        activeChats.push(chatKey);
+        localStorage.setItem('fr3on_active_chats_list', JSON.stringify(activeChats));
+    }
+    
+    showNotification('تم إرسال الطلب للإدارة بنجاح! سيتم الرد عليك قريباً. ✅');
+    
+    document.getElementById('checkoutSenderNumber').value = '';
+    document.getElementById('checkoutImageName').innerHTML = 'اضغط لاختيار صورة الإثبات';
+    checkoutTransferImageBase64 = "";
+    
+    switchPage('messagesPage');
+    openSupportChat();
+}
+
+function openAdminPackagesModal() {
+    if(!isAdmin()) return;
+    document.getElementById('adminPackageGameTitle').innerText = siteGames.find(g => g.key === rechargeSelectedGameKey)?.name || 'اللعبة';
+    renderAdminPackagesEditor();
+    document.getElementById('adminPackagesModal').classList.add('show');
+}
+
+function closeAdminPackagesModal(e) {
+    if(e && e.target.id !== 'adminPackagesModal') return;
+    document.getElementById('adminPackagesModal').classList.remove('show');
+}
+
+function renderAdminPackagesEditor() {
+    const c = document.getElementById('adminPackagesEditorContainer');
+    c.innerHTML = '';
+    const packages = sitePackages[rechargeSelectedGameKey] || [];
+    packages.forEach((pkg, i) => {
+        c.innerHTML += `
+        <div style="background: #161b22; border: 1px solid #30363d; border-radius: 10px; padding: 10px; margin-bottom: 10px; display: flex; flex-direction: column; gap: 8px;">
+            <input type="text" id="pkgName_${i}" value="${pkg.name}" placeholder="اسم الباقة (مثال: 100+10)" class="admin-input" style="margin-bottom:0;">
+            <input type="text" id="pkgPrice_${i}" value="${pkg.price}" placeholder="السعر" class="admin-input" style="margin-bottom:0;">
+            <button onclick="removePackageItem(${i})" class="admin-btn-danger" style="align-self: flex-start;">حذف</button>
+        </div>`;
+    });
+}
+
+function addNewPackageItem() {
+    if(!sitePackages[rechargeSelectedGameKey]) sitePackages[rechargeSelectedGameKey] = [];
+    sitePackages[rechargeSelectedGameKey].push({ name: 'باقة جديدة', price: 0, icon: 'https://cdn-icons-png.flaticon.com/512/822/822143.png' });
+    renderAdminPackagesEditor();
+}
+
+function removePackageItem(i) {
+    sitePackages[rechargeSelectedGameKey].splice(i, 1);
+    renderAdminPackagesEditor();
+}
+
+function saveAdminPackages() {
+    const packages = sitePackages[rechargeSelectedGameKey];
+    packages.forEach((pkg, i) => {
+        pkg.name = document.getElementById(`pkgName_${i}`).value.trim();
+        pkg.price = document.getElementById(`pkgPrice_${i}`).value.trim();
+    });
+    localStorage.setItem('medo_site_packages', JSON.stringify(sitePackages));
+    renderRechargePackages();
+    closeAdminPackagesModal();
+    showNotification('تم حفظ الباقات بنجاح! 💎');
+}
+
+function isAdmin(){return isLoggedIn&&loggedInEmail===ADMIN_EMAIL}
+function showNotification(msg,type='success'){let t=document.createElement('div');t.className=`custom-toast ${type}`;let i=type==='success'?'<i class="fa-solid fa-circle-check"></i>':'<i class="fa-solid fa-circle-exclamation"></i>';t.innerHTML=`${i} <span>${msg}</span>`;document.body.appendChild(t);setTimeout(()=>{t.classList.add('show')},10);setTimeout(()=>{t.classList.remove('show');setTimeout(()=>t.remove(),400)},3500)}
+function updateSiteTextsUI(){document.getElementById('heroDescText').innerHTML=currentHeroDesc;document.getElementById('homeWarningText').innerHTML=currentWarningText;document.getElementById('headerTitleText').innerText=currentStoreName;document.getElementById('heroTitleText').innerText=currentStoreName;document.querySelectorAll(".fr3on-logo").forEach(i=>{i.src=currentLogo})}
+function renderHomePageDynamicElements(){updateSiteTextsUI();const c=document.getElementById('dynamicChannelsContainer');if(c){c.innerHTML='';siteChannels.forEach(ch=>{c.innerHTML+=`<div style="background:#090c10;border:1px solid #1c2634;border-radius:20px;padding:18px 20px;margin:0 auto 15px auto;max-width:92%;box-shadow:0 4px 20px rgba(0,0,0,0.6);"><table style="width:100%;border-collapse:collapse;" dir="rtl"><tr><td style="text-align:right;vertical-align:middle;"><div style="display:flex;align-items:center;gap:12px;justify-content:flex-start;"><div style="width:48px;height:48px;background:#0b1f24;border:1px solid rgba(0,245,247,0.3);border-radius:50%;display:flex;align-items:center;justify-content:center;color:#00f5f7;font-size:20px;flex-shrink:0;"><i class="fa-brands ${ch.icon||'fa-whatsapp'}"></i></div><div><h4 style="color:#ffffff;font-size:16px;font-weight:bold;margin:0 0 4px 0;">${ch.name}</h4><p style="color:#8b949e;font-size:11px;margin:0 0 4px 0;" dir="ltr">${ch.type}</p><p style="color:#7b8396;font-size:12px;margin:0;">${ch.desc}</p></div></div></td><td style="text-align:left;vertical-align:middle;width:110px;"><a href="${ch.link}" target="_blank" style="display:inline-block;background:transparent;color:#ffffff;font-size:13px;font-weight:500;padding:8px 18px;border-radius:20px;border:1px solid rgba(255,255,255,0.25);text-decoration:none;text-align:center;white-space:nowrap;">افتح الرابط</a></td></tr></table></div>`})}
+const p=document.getElementById('phonesSectionContainer');if(sitePhones.length>0){if(p)p.style.display='block';const pc=document.getElementById('dynamicPhonesContainer');if(pc){pc.innerHTML='';sitePhones.forEach(ph=>{pc.innerHTML+=`<a href="${ph.link}" target="_blank" style="background:#090c10;border:1px solid #1c2634;border-radius:18px;padding:18px 12px;text-decoration:none;text-align:center;display:flex;flex-direction:column;align-items:center;justify-content:center;"><div style="width:42px;height:42px;background:#0b1f24;border:1px solid rgba(0,245,247,0.3);border-radius:50%;display:flex;align-items:center;justify-content:center;color:#00f5f7;font-size:18px;margin-bottom:10px;"><i class="fa-brands fa-whatsapp"></i></div><span style="color:#ffffff;font-size:14px;font-weight:bold;margin-bottom:4px;direction:ltr;" dir="ltr">${ph.phone}</span><span style="color:#8b949e;font-size:11px;">${ph.label}</span></a>`})}}else{if(p)p.style.display='none'}
+const t=document.getElementById('telegramSectionContainer');if(siteTelegram.username){if(t)t.style.display='block';const tc=document.getElementById('dynamicTelegramContainer');if(tc){tc.innerHTML=`<a href="${siteTelegram.link}" target="_blank" style="background:#090c10;border:1px solid #1c2634;border-radius:18px;padding:20px;text-decoration:none;text-align:center;display:flex;flex-direction:column;align-items:center;justify-content:center;"><div style="width:42px;height:42px;background:#0b1f24;border:1px solid rgba(0,245,247,0.3);border-radius:50%;display:flex;align-items:center;justify-content:center;color:#00f5f7;font-size:18px;margin-bottom:10px;"><i class="fa-brands fa-telegram"></i></div><span style="color:#ffffff;font-size:15px;font-weight:bold;margin-bottom:4px;direction:ltr;" dir="ltr">${siteTelegram.username}</span><span style="color:#8b949e;font-size:11px;">إدارة MAESTRO SHOP</span></a>`}}else{if(t)t.style.display='none'}}
+function saveCustomLogoUrl(){let u=document.getElementById('customLogoInput').value.trim();if(u){currentLogo=u;localStorage.setItem('medo_site_logo',currentLogo);updateSiteTextsUI();showNotification("تم تثبيت اللوجو بنجاح! ✨")}}
+function saveStoreIdentity(){currentStoreName=document.getElementById('adminStoreNameInput').value.trim()||DEFAULT_STORE_NAME;localStorage.setItem('medo_site_store_name',currentStoreName);updateSiteTextsUI();showNotification("تم حفظ اسم المتجر بنجاح! 👑")}
+function saveSiteTexts(){currentHeroDesc=document.getElementById('adminHeroDescInput').value.trim()||DEFAULT_HERO_DESC;currentWarningText=document.getElementById('adminWarningInput').value.trim()||DEFAULT_WARNING_TEXT;localStorage.setItem('medo_hero_desc',currentHeroDesc);localStorage.setItem('medo_warning_text',currentWarningText);updateSiteTextsUI();showNotification("تم حفظ النصوص بنجاح! 📝")}
+function saveTelegramChanges(){let u=document.getElementById('adminTelegramUser').value.trim(),l=document.getElementById('adminTelegramLink').value.trim();if(u&&!l){showNotification("أدخل رابط التيليجرام أيضاً!","error");return}siteTelegram={username:u,link:l};localStorage.setItem('medo_site_telegram',JSON.stringify(siteTelegram));renderHomePageDynamicElements();showNotification("تم حفظ بيانات التيليجرام بنجاح! ✈️")}
+function renderAdminChannelEditors(){const c=document.getElementById('adminChannelsEditorContainer');c.innerHTML='';if(siteChannels.length===0){c.innerHTML='<div style="color:#8b949e;font-size:12px;text-align:center;">لا توجد قنوات.</div>'}siteChannels.forEach((ch,i)=>{c.innerHTML+=`<div style="background:#02090c;border:1px solid #006b72;border-radius:12px;padding:10px;display:flex;flex-direction:column;gap:8px;"><input type="text" id="chName_${i}" value="${ch.name}" placeholder="اسم القناة" class="admin-input" style="margin-bottom:0;"><input type="text" id="chLink_${i}" value="${ch.link}" placeholder="الرابط" class="admin-input" style="margin-bottom:0;" dir="ltr"><button onclick="removeChannelItem(${i})" class="admin-btn-danger" style="align-self:flex-start;">حذف</button></div>`})}
+function addNewChannelItem(){siteChannels.push({name:"قناة جديدة",type:"WHATSAPP",desc:"وصف",icon:"fa-whatsapp",link:""});renderAdminChannelEditors()}
+function removeChannelItem(i){siteChannels.splice(i,1);renderAdminChannelEditors()}
+function saveChannelsChanges(){siteChannels=siteChannels.map((ch,i)=>({...ch,name:document.getElementById(`chName_${i}`).value.trim()||"قناة",link:document.getElementById(`chLink_${i}`).value.trim()||"#"}));localStorage.setItem('medo_site_channels',JSON.stringify(siteChannels));renderHomePageDynamicElements();showNotification("تم حفظ القنوات بنجاح! 🔗")}
+function renderAdminPhoneEditors(){const c=document.getElementById('adminPhonesEditorContainer');c.innerHTML='';if(sitePhones.length===0){c.innerHTML='<div style="color:#8b949e;font-size:12px;text-align:center;">لا توجد أرقام.</div>'}sitePhones.forEach((p,i)=>{c.innerHTML+=`<div style="background:#02090c;border:1px solid #006b72;border-radius:12px;padding:10px;display:flex;flex-direction:column;gap:8px;"><input type="text" id="phNum_${i}" value="${p.phone}" placeholder="الرقم" class="admin-input" style="margin-bottom:0;" dir="ltr"><input type="text" id="phLabel_${i}" value="${p.label}" placeholder="الاسم" class="admin-input" style="margin-bottom:0;"><input type="text" id="phLink_${i}" value="${p.link}" placeholder="الرابط" class="admin-input" style="margin-bottom:0;" dir="ltr"><button onclick="removePhoneItem(${i})" class="admin-btn-danger" style="align-self:flex-start;">حذف</button></div>`})}
+function addNewPhoneItem(){sitePhones.push({phone:"+20",label:"اسم الإدارة",link:"https://wa.me/"});renderAdminPhoneEditors()}
+function removePhoneItem(i){sitePhones.splice(i,1);renderAdminPhoneEditors()}
+function savePhonesChanges(){sitePhones=sitePhones.map((p,i)=>({phone:document.getElementById(`phNum_${i}`).value.trim()||p.phone,label:document.getElementById(`phLabel_${i}`).value.trim()||p.label,link:document.getElementById(`phLink_${i}`).value.trim()||p.link}));localStorage.setItem('medo_site_phones',JSON.stringify(sitePhones));renderHomePageDynamicElements();showNotification("تم حفظ الأرقام بنجاح! 📞")}
+function setupAdminPanel(){document.getElementById('customLogoInput').value=currentLogo;document.getElementById('adminStoreNameInput').value=currentStoreName;document.getElementById('adminHeroDescInput').value=currentHeroDesc;document.getElementById('adminWarningInput').value=currentWarningText;document.getElementById('adminTelegramUser').value=siteTelegram.username||"";document.getElementById('adminTelegramLink').value=siteTelegram.link||"";document.getElementById('adminColorPrimary').value=siteColors.primary;document.getElementById('adminColorBg').value=siteColors.bg;document.getElementById('adminColorSecondary').value=siteColors.secondary;renderAdminChannelEditors();renderAdminPhoneEditors();renderAdminGamesEditors();renderAdminAppsEditors();}
+
+function renderNav(){
+  const n=document.getElementById('bottomNav'),b=document.getElementById('homeAddAdBtn');
+  const storeBtn=`<a href="#" class="nav-item" id="navStore" onclick="switchPage('storePage',event);updateNav(this);"><i class="fa-solid fa-store"></i><span>المتجر</span></a>`;
+  const supportBtn=`<a href="#" class="nav-item" id="navSupport" onclick="openSupportOptions();event.preventDefault();"><i class="fa-solid fa-headset"></i><span>الدعم</span></a>`;
+  const messagesBtn=`<a href="#" class="nav-item" id="navAdminMessages" onclick="switchPage('messagesPage',event);updateNav(this);loadAdminMessagesRequests();" style="color:var(--cyan);"><i class="fa-solid fa-envelope"></i><span>الرسائل</span><span class="badge-dot" id="messagesBadgeDot" style="display:none; position:absolute; top:0; right:10px;"></span></a>`;
+  
+  if(!isLoggedIn){
+    if(b)b.style.display='none';
+    n.innerHTML=`<a href="#" class="nav-item active" id="navHome" onclick="switchPage('homePage',event);updateNav(this);"><i class="fa-solid fa-house"></i><span>الرئيسية</span></a>`+storeBtn+supportBtn+`<a href="#" class="nav-item" id="navLogin" onclick="switchPage('loginPage',event);updateNav(this);"><i class="fa-solid fa-right-to-bracket"></i><span>دخول</span></a><a href="#" class="nav-item" id="navRegister" onclick="switchPage('registerPage',event);updateNav(this);"><i class="fa-solid fa-user-plus"></i><span>حساب جديد</span></a>`;
+  }else if(isAdmin()){
+    if(b)b.style.display='flex';
+    // هنا ضفنا زرار الرسائل للمطور
+    n.innerHTML=`<a href="#" class="nav-item active" id="navHome" onclick="switchPage('homePage',event);updateNav(this);"><i class="fa-solid fa-house"></i><span>الرئيسية</span></a>`+storeBtn+supportBtn+messagesBtn+`<a href="#" class="nav-item" id="navProfile" onclick="switchPage('profilePage',event);updateNav(this);updateProfileDisplay();"><i class="fa-solid fa-user"></i><span>حسابي</span></a><a href="#" class="nav-item" id="navLogoutBtn" onclick="logout();event.preventDefault();" style="color:#ff4d4d;"><i class="fa-solid fa-right-from-bracket"></i><span>خروج</span></a>`;
+  }else{
+    if(b)b.style.display='flex';
+    // هنا ضفنا زرار الرسائل للعملاء كمان عشان يقدروا يتابعوا طلباتهم
+    n.innerHTML=`<a href="#" class="nav-item active" id="navHome" onclick="switchPage('homePage',event);updateNav(this);"><i class="fa-solid fa-house"></i><span>الرئيسية</span></a>`+storeBtn+supportBtn+`<a href="#" class="nav-item" id="navMessages" onclick="switchPage('messagesPage',event);updateNav(this);loadAdminMessagesRequests();"><i class="fa-solid fa-comment"></i><span>الرسائل</span></a><a href="#" class="nav-item" id="navProfile" onclick="switchPage('profilePage',event);updateNav(this);updateProfileDisplay();"><i class="fa-solid fa-user"></i><span>حسابي</span></a><a href="#" class="nav-item" id="navLogoutBtn" onclick="logout();event.preventDefault();" style="color:#ff4d4d;"><i class="fa-solid fa-right-from-bracket"></i><span>خروج</span></a>`;
+  }
+  updateAdminBadge()
+}
+function updateProfileDisplay(){document.getElementById('profileUserName').innerText=currentUser.name;document.getElementById('profileUserEmail').innerText=isLoggedIn?currentUser.email:"";const a=JSON.parse(localStorage.getItem('fr3on_all_posts')||'[]').filter(p=>p.authorEmail===currentUser.email).length;const m=document.getElementById('masterAdminPanel'),f=document.getElementById('adminPostFormContainer');if(isAdmin()){if(m)m.style.display="block";if(f)f.style.display="block";setupAdminPanel()}else{if(m)m.style.display="none";if(f)f.style.display="none"}}
+function getUsers(){try{return JSON.parse(localStorage.getItem('fr3on_users')||'[]')}catch(e){return[]}}
+function startSession(u){isLoggedIn=!0;loggedInEmail=u.email;currentUser={name:u.name,email:u.email,phone:u.phone||""};localStorage.setItem('fr3on_session',u.email);renderNav();updateProfileDisplay();switchPage('homePage');showNotification(`أهلاً بك مجدداً يا ${u.name} 🌟`,'success')}
+function loginSuccess(){const e=document.getElementById('loginEmailInput').value.trim().toLowerCase(),p=document.getElementById('loginPasswordInput').value;if(!e||!p){showNotification("يرجى كتابة البريد وكلمة المرور أولاً!","error");return}if(e===ADMIN_EMAIL){if(p!==ADMIN_PASSWORD){showNotification("عذراً، بيانات الدخول غير صحيحة!","error");return}startSession({name:"إدارة MAESTRO SHOP",email:ADMIN_EMAIL})}else{const u=getUsers().find(x=>x.email===e&&x.password===p);if(!u){showNotification("عذراً، بيانات الدخول غير صحيحة!","error");return}startSession(u)}document.getElementById('loginEmailInput').value='';document.getElementById('loginPasswordInput').value=''}
+function registerSuccess(){const n=document.getElementById('regNameInput').value.trim(),p=document.getElementById('regPasswordInput').value,cp=document.getElementById('regConfirmPasswordInput').value,e=document.getElementById('regEmailInput').value.trim().toLowerCase();if(!n||!e){showNotification("يرجى إكمال جميع البيانات المطلوبة!","error");return}if(p.length<6){showNotification("كلمة المرور يجب أن تكون 6 أحرف على الأقل!","error");return}if(p!==cp){showNotification("كلمتا المرور غير متطابقتين!","error");return}if(e===ADMIN_EMAIL){showNotification("هذا البريد محجوز للإدارة!","error");return}const us=getUsers();if(us.some(x=>x.email===e)){showNotification("هذا الحساب موجود بالفعل، يمكنك تسجيل الدخول.","error");return}const u={name:n,email:e,password:p};us.push(u);localStorage.setItem('fr3on_users',JSON.stringify(us));document.getElementById('regNameInput').value='';document.getElementById('regPasswordInput').value='';document.getElementById('regConfirmPasswordInput').value='';startSession(u);showNotification("تم إنشاء حسابك بنجاح! أهلاً بك 🎉")}
+function logout(){isLoggedIn=!1;loggedInEmail="";currentUser={name:"زائر MAESTRO SHOP",email:"visitor@medo.com",phone:""};localStorage.removeItem('fr3on_session');renderNav();updateProfileDisplay();switchPage('homePage');showNotification("تم تسجيل الخروج بنجاح. نراك قريباً 👋")}
+function restoreSession(){const e=localStorage.getItem('fr3on_session');if(!e)return;if(e===ADMIN_EMAIL){startSession({name:"إدارة MAESTRO SHOP",email:ADMIN_EMAIL})}else{const u=getUsers().find(x=>x.email===e);if(u)startSession(u);else localStorage.removeItem('fr3on_session')}}
+function switchPage(id,ev){if(ev)ev.preventDefault();if(id==='addAdPage'&&!isLoggedIn){switchPage('loginPage');showNotification("يجب تسجيل الدخول أولاً لإضافة إعلان.","error");return}if(id==='profilePage'&&!isLoggedIn){switchPage('loginPage');return}document.querySelectorAll('.page-section').forEach(p=>p.classList.remove('active-page'));document.getElementById(id).classList.add('active-page');window.scrollTo({top:0,behavior:'smooth'});const fcb=document.getElementById('floatingChannelBtn');if(fcb)fcb.style.display=(id==='adminChannelPage'||id==='rechargePage'||id==='checkoutPage'||id==='storePage')?'none':'flex';if(id==='postsPage')loadAllPosts();else if(id==='messagesPage')loadAdminMessagesRequests();else if(id==='adminChannelPage')loadChannelPosts();else if(id==='profilePage')updateProfileDisplay();else if(id==='rechargePage'){renderRechargeGames();renderRechargePackages();}else if(id==='storePage')renderDynamicStore();}
+function openChannelFromFloating(e){if(e)e.preventDefault();document.querySelectorAll('.bottom-nav .nav-item').forEach(i=>i.classList.remove('active'));switchPage('adminChannelPage')}
+function updateNav(el){document.querySelectorAll('.bottom-nav .nav-item').forEach(i=>i.classList.remove('active'));el.classList.add('active')}
+function updateNavById(id){document.querySelectorAll('.bottom-nav .nav-item').forEach(i=>i.classList.remove('active'));const t=document.getElementById(id);if(t)t.classList.add('active')}
+const countriesList=[{name:"مصر",code:"+20",flag:"🇪🇬"},{name:"السعودية",code:"+966",flag:"🇸🇦"},{name:"الإمارات",code:"+971",flag:"🇦🇪"},{name:"العراق",code:"+964",flag:"🇮🇶"},{name:"الكويت",code:"+965",flag:"🇰🇼"},{name:"المغرب",code:"+212",flag:"🇲🇦"},{name:"الجزائر",code:"+213",flag:"🇩🇿"},{name:"الأردن",code:"+962",flag:"🇯🇴"},{name:"فلسطين",code:"+970",flag:"🇵🇸"},{name:"سوريا",code:"+963",flag:"🇸🇾"},{name:"لبنان",code:"+961",flag:"🇱🇧"},{name:"قطر",code:"+974",flag:"🇶🇦"},{name:"البحرين",code:"+973",flag:"🇧🇭"},{name:"عمان",code:"+968",flag:"🇴🇲"},{name:"اليمن",code:"+967",flag:"🇾🇪"},{name:"السودان",code:"+249",flag:"🇸🇩"},{name:"ليبيا",code:"+218",flag:"🇱🇾"},{name:"تونس",code:"+216",flag:"🇹🇳"},{name:"الولايات المتحدة",code:"+1",flag:"🇺🇸"},{name:"بريطانيا",code:"+44",flag:"🇬🇧"}];
+const currenciesList=[{name:"جنيه مصري",symbol:"EGP"},{name:"ريال سعودي",symbol:"SAR"},{name:"درهم إماراتي",symbol:"AED"},{name:"دولار أمريكي",symbol:"USD"},{name:"دينار كويتي",symbol:"KWD"},{name:"دينار أردني",symbol:"JOD"},{name:"ريال قطري",symbol:"QAR"},{name:"دينار عراقي",symbol:"IQD"},{name:"يورو",symbol:"EUR"}];
+function openCountryModal(t){activeCountryTarget=t;document.getElementById('countrySearchInput').value='';renderCountriesList(countriesList);document.getElementById('countryModal').classList.add('show')}
+function renderCountriesList(l){const c=document.getElementById('countriesListContainer');c.innerHTML='';l.forEach(i=>{c.innerHTML+=`<div class="category-option" onclick="selectCountry('${i.flag}','${i.code}','${i.name}')"><div style="display:flex;align-items:center;gap:10px;"><span style="font-size:20px;">${i.flag}</span><span>${i.name}</span></div><span style="color:var(--cyan);direction:ltr;" dir="ltr">${i.code}</span></div>`})}
+function filterCountries(){const q=document.getElementById('countrySearchInput').value.toLowerCase();renderCountriesList(countriesList.filter(c=>c.name.toLowerCase().includes(q)||c.code.toLowerCase().includes(q)))}
+function closeCountryModal(e){if(e.target.id==='countryModal'||e.type==='click')document.getElementById('countryModal').classList.remove('show')}
+function selectCountry(f,c,name){
+    if(activeCountryTarget==='ad'){
+        document.getElementById('adFlag').innerText=f;
+        document.getElementById('adCode').innerText=c;
+    } else if(activeCountryTarget==='store') {
+        document.getElementById('storeFlag').innerText=f;
+        document.getElementById('storeCountryName').innerText=name;
+    } else {
+        document.getElementById('regFlag').innerText=f;
+        document.getElementById('regCode').innerText=c;
+    }
+    document.getElementById('countryModal').classList.remove('show');
+}
+function openCurrencyModal(){document.getElementById('currencySearchInput').value='';renderCurrenciesList(currenciesList);document.getElementById('currencyModal').classList.add('show')}
+function renderCurrenciesList(l){const c=document.getElementById('currenciesListContainer');c.innerHTML='';l.forEach(i=>{c.innerHTML+=`<div class="category-option" onclick="selectCurrency('${i.symbol}')"><span>${i.name}</span><span style="color:var(--cyan);font-weight:bold;">${i.symbol}</span></div>`})}
+function filterCurrencies(){const q=document.getElementById('currencySearchInput').value.toLowerCase();renderCurrenciesList(currenciesList.filter(c=>c.name.toLowerCase().includes(q)||c.symbol.toLowerCase().includes(q)))}
+function closeCurrencyModal(e){if(e.target.id==='currencyModal'||e.type==='click')document.getElementById('currencyModal').classList.remove('show')}
+function selectCurrency(s){document.getElementById('selectedCurrencyText').innerText=s;document.getElementById('currencyModal').classList.remove('show')}
+function handleSingleImagePick(e){const f=e.target.files[0];if(f){const r=new FileReader();r.onload=ev=>{selectedSingleImage=ev.target.result;document.getElementById('selectedImagePreviewContainer').innerHTML=`<div style="position:relative;display:inline-block;width:100%;"><img src="${selectedSingleImage}" style="width:100%;max-height:200px;object-fit:contain;border-radius:12px;border:1px solid var(--cyan);background:#000;"><button type="button" onclick="clearSelectedImage()" style="position:absolute;top:5px;right:5px;background:#ff4d4d;color:#fff;border:0;border-radius:50%;width:25px;height:25px;cursor:pointer;font-weight:bold;">×</button></div>`};r.readAsDataURL(f)}}
+function clearSelectedImage(){selectedSingleImage="";document.getElementById('selectedImagePreviewContainer').innerHTML='';document.getElementById('userAdImageFile').value=''}
+function submitUserAd(){if(!isLoggedIn){switchPage('loginPage');showNotification("يجب تسجيل الدخول أولاً لإضافة إعلان.","error");return}let c=document.getElementById('userAdCategory').value;let d=document.getElementById('userAdDesc').value.trim();if(!c){showNotification("يرجى اختيار فئة الإعلان أولاً.","error");return}if(!d){showNotification("يرجى كتابة وصف للإعلان.","error");return}let s=document.getElementById('selectedCurrencyText').innerText;let p=document.getElementById('userAdPrice').value||'0';let n={title:'إعلان '+c,category:c,price:p+' '+s,desc:d,img:selectedSingleImage,author:currentUser.name,authorEmail:currentUser.email,date:new Date().toLocaleDateString('ar-EG')};let pending=JSON.parse(localStorage.getItem('fr3on_pending_posts')||'[]');pending.unshift(n);localStorage.setItem('fr3on_pending_posts',JSON.stringify(pending));document.getElementById('userAdCategory').selectedIndex=0;document.getElementById('userAdDesc').value='';document.getElementById('userAdPrice').value='0';clearSelectedImage();showNotification("تم إرسال إعلانك للإدارة للمراجعة بنجاح! ✅");updateAdminBadge();switchPage('homePage')}
+function updateAdminBadge(){if(isAdmin()){let p=JSON.parse(localStorage.getItem('fr3on_pending_posts')||'[]');let b=document.getElementById('messagesBadgeDot');if(b){if(p.length>0)b.classList.add('show');else b.classList.remove('show')}}}
+function loadAdminMessagesRequests(){const a=document.getElementById('messagesAdminSection'),c=document.getElementById('adminChatsListSection'),n=document.getElementById('normalUserMessagesBox'),co=document.getElementById('adminPendingRequestsContainer'),ch=document.getElementById('adminCustomerChatsContainer');if(isAdmin()){a.style.display='block';c.style.display='block';n.style.display='none';let p=JSON.parse(localStorage.getItem('fr3on_pending_posts')||'[]');if(p.length===0){co.innerHTML='<p style="color:#8b949e;font-size:12px;text-align:center;">لا توجد طلبات إعلانات معلقة.</p>'}else{co.innerHTML='';p.forEach((post,i)=>{let im=post.img?`<img src="${post.img}" style="width:50px;height:50px;object-fit:cover;border-radius:8px;margin-left:10px;border:1px solid #30363d;">`:'';co.innerHTML+=`<div style="background:#0b1018;border:1px solid #1c2634;border-radius:14px;padding:14px;margin-bottom:10px;display:flex;align-items:center;justify-content:space-between;gap:10px;"><div style="display:flex;align-items:center;overflow:hidden;flex-grow:1;">${im}<div style="overflow:hidden;"><div style="font-weight:bold;font-size:14px;color:#fff;margin-bottom:3px;">${post.author}</div><p style="color:#8b949e;font-size:12px;margin:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">${post.desc}</p></div></div><div style="display:flex;gap:6px;flex-shrink:0;"><button onclick="approvePost(${i})" style="background:var(--cyan);color:var(--site-bg);border:0;border-radius:8px;padding:6px 12px;font-weight:bold;cursor:pointer;font-size:12px;">موافقة ✅</button><button onclick="rejectPost(${i})" style="background:#ff4d4d;color:#fff;border:0;border-radius:8px;padding:6px 12px;font-weight:bold;cursor:pointer;font-size:12px;">رفض ❌</button></div></div>`})}let ac=JSON.parse(localStorage.getItem('fr3on_active_chats_list')||'[]');if(ac.length===0){ch.innerHTML='<p style="color:#8b949e;font-size:12px;text-align:center;">لا توجد محادثات عملاء حالياً.</p>'}else{ch.innerHTML='';ac.forEach(k=>{let m=JSON.parse(localStorage.getItem(k)||'[]'),lm=m.length>0?m[m.length-1]:{text:'لا توجد رسائل',time:''},u=k.replace('fr3on_chat_','');ch.innerHTML+=`<div onclick="openSupportChat('${k}')" style="background:#071418;border:1px solid #006b72;border-radius:14px;padding:14px 18px;display:flex;align-items:center;justify-content:space-between;cursor:pointer;margin-bottom:8px;"><div style="display:flex;align-items:center;gap:12px;flex-grow:1;"><div style="width:40px;height:40px;background:#0b1f24;border-radius:50%;display:flex;align-items:center;justify-content:center;color:var(--cyan);flex-shrink:0;"><i class="fa-solid fa-user"></i></div><div style="overflow:hidden;"><div style="color:#fff;font-size:14px;font-weight:bold;margin-bottom:3px;">${u}</div><div style="color:#8b949e;font-size:12px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:220px;">${lm.type==='img'?'📷 [صورة مرسلة]':lm.text}</div></div></div><div style="text-align:left;flex-shrink:0;"><span style="color:var(--cyan);font-size:11px;font-weight:bold;display:block;margin-bottom:2px;">فتح الشات 💬</span><span style="color:#8b949e;font-size:10px;">${lm.time}</span></div></div>`})}updateAdminBadge()}else{a.style.display='none';c.style.display='none';n.style.display='block'}}
+function approvePost(i){if(!isAdmin())return;let p=JSON.parse(localStorage.getItem('fr3on_pending_posts')||'[]'),s=JSON.parse(localStorage.getItem('fr3on_all_posts')||'[]');let a=p.splice(i,1)[0];s.unshift(a);localStorage.setItem('fr3on_pending_posts',JSON.stringify(p));localStorage.setItem('fr3on_all_posts',JSON.stringify(s));showNotification("تمت الموافقة على الإعلان ونشره بنجاح! 🎉");loadAdminMessagesRequests()}
+function rejectPost(i){if(!isAdmin())return;let p=JSON.parse(localStorage.getItem('fr3on_pending_posts')||'[]');p.splice(i,1);localStorage.setItem('fr3on_pending_posts',JSON.stringify(p));showNotification("تم رفض وحذف الإعلان.","error");loadAdminMessagesRequests()}
+function loadAllPosts(){const c=document.getElementById('allPostsContainer');let p=JSON.parse(localStorage.getItem('fr3on_all_posts')||'[]'),cat=document.getElementById('filterSelectedCategoryText').innerText,si=document.getElementById('searchPostsInput'),q=si?si.value.trim().toLowerCase():'';if(cat&&cat!=='الكل'){p=p.filter(x=>x.category===cat)}if(q){p=p.filter(x=>(x.title||'').toLowerCase().includes(q)||(x.desc||'').toLowerCase().includes(q))}c.innerHTML=p.length===0?'<p style="color:#8b949e;text-align:center;padding:20px;">لا توجد منشورات في هذا القسم.</p>':'';p.forEach(post=>{let im=post.img?`<img src="${post.img}" onclick="openLightBox('${post.img}')" style="width:100%;max-height:250px;object-fit:cover;border-radius:10px;margin-bottom:10px;cursor:pointer;border:1px solid #1c2634;">`:'';c.innerHTML+=`<div style="background:#090c10;border:1px solid #1c2634;border-radius:20px;padding:20px;margin-bottom:15px;"><div style="display:flex;justify-content:space-between;margin-bottom:10px;border-bottom:1px solid #162230;padding-bottom:10px;"><div style="color:#fff;font-weight:bold;font-size:14px;"><i class="fa-solid fa-user" style="color:var(--cyan);"></i> ${post.author||'مستخدم'}</div><div style="color:#8b949e;font-size:11px;">${post.date||''}</div></div>${im}<h3 style="color:#fff;font-size:16px;margin-bottom:8px;">${post.title}</h3><p style="color:var(--cyan);font-weight:bold;margin-bottom:8px;">${post.price}</p><p style="color:#8b949e;font-size:13px;line-height:1.6;">${post.desc}</p></div>`})}
+function filterUserPosts(){loadAllPosts()}
+function getTargetChatKey(){if(isAdmin()&&adminActiveChatKey)return adminActiveChatKey;let i=isLoggedIn?loggedInEmail:("visitor_"+(localStorage.getItem('fr3on_visitor_id')||Math.random().toString(36).substring(7)));if(!isLoggedIn&&!localStorage.getItem('fr3on_visitor_id'))localStorage.setItem('fr3on_visitor_id',i.replace('visitor_',''));return 'fr3on_chat_'+i}
+function openSupportChat(k=null){const m=document.getElementById('supportChatModal');m.style.display='flex';if(isAdmin()&&k){adminActiveChatKey=k;document.getElementById('chatHeaderTitle').innerText="محادثة مع: "+k.replace('fr3on_chat_','')}else{adminActiveChatKey="";document.getElementById('chatHeaderTitle').innerText="إدارة MAESTRO SHOP (الدعم المباشر)"}loadChatMessages()}
+function closeSupportChat(){document.getElementById('supportChatModal').style.display='none';adminActiveChatKey="";loadAdminMessagesRequests()}
+function loadChatMessages(){const c=document.getElementById('chatMessagesContainer');let k=getTargetChatKey(),m=JSON.parse(localStorage.getItem(k)||'[]');if(m.length===0&&!isAdmin()){m=[{sender:'admin',text:'أهلاً بك في MAESTRO SHOP! كيف يمكننا مساعدتك اليوم؟',time:new Date().toLocaleTimeString('ar-EG',{hour:'2-digit',minute:'2-digit'}),type:'text'}];localStorage.setItem(k,JSON.stringify(m))}c.innerHTML='';m.forEach((msg,i)=>{let isMe=(isAdmin()&&adminActiveChatKey)?(msg.sender==='admin'):(msg.sender==='user'),bg=isMe?'#032123':'#161b22',as=isMe?'flex-end':'flex-start',rs=isMe?'16px 16px 16px 0':'16px 16px 0 16px',ch=msg.isDeleted?`<div style="color:#8b949e;font-style:italic;font-size:13px;"><i class="fa-solid fa-ban"></i> تم حذف هذه الرسالة</div>`:(msg.type==='img'?`<img src="${msg.text}" style="max-width:100%;border-radius:10px;margin-bottom:5px;">`:msg.text),rb=msg.reaction?`<div style="position:absolute;bottom:-10px;${isMe?'right':'left'}:10px;background:#161b22;border:1px solid #30363d;border-radius:12px;padding:2px 6px;font-size:12px;box-shadow:0 2px 8px rgba(0,0,0,0.5);">${msg.reaction}</div>`:'';c.innerHTML+=`<div style="display:flex;flex-direction:column;align-items:${as};max-width:80%;align-self:${as};position:relative;margin-bottom:10px;"><div onclick="toggleMessageMenu(event,${i})" style="background:${bg};border:1px solid #008e95;border-radius:${rs};padding:12px 16px;color:#fff;font-size:13.5px;line-height:1.5;word-break:break-all;cursor:pointer;position:relative;">${ch} ${rb}</div><div style="color:#8b949e;font-size:10px;margin-top:4px;">${msg.time}</div></div>`});c.scrollTop=c.scrollHeight}
+function toggleMessageMenu(e,i){e.stopPropagation();let ex=document.getElementById('chatMsgActionMenu');if(ex)ex.remove();let m=document.createElement('div');m.id='chatMsgActionMenu';m.style.cssText="position:absolute;background:#0b1018;border:1px solid #008e95;border-radius:30px;padding:6px 12px;display:flex;gap:12px;align-items:center;z-index:6000;box-shadow:0 4px 20px rgba(0,0,0,0.8);font-size:18px;";m.innerHTML=`<span onclick="setMsgReaction(${i},'❤️')" style="cursor:pointer;">❤️</span><span onclick="setMsgReaction(${i},'🔥')" style="cursor:pointer;">🔥</span><span onclick="setMsgReaction(${i},'👍')" style="cursor:pointer;">👍</span><span onclick="setMsgReaction(${i},'😂')" style="cursor:pointer;">😂</span><span onclick="setMsgReaction(${i},'😮')" style="cursor:pointer;">😮</span><span onclick="deleteChatMessage(${i})" style="color:#ff4d4d;font-size:14px;cursor:pointer;margin-right:5px;" title="حذف"><i class="fa-solid fa-trash"></i></span>`;let r=e.currentTarget.getBoundingClientRect();document.body.appendChild(m);m.style.top=(r.top-50)+'px';m.style.left=Math.max(10,r.left)+'px';document.addEventListener('click',function rm(){m.remove();document.removeEventListener('click',rm)},{once:true})}
+function setMsgReaction(i,e){let k=getTargetChatKey(),m=JSON.parse(localStorage.getItem(k)||'[]');m[i].reaction=e;localStorage.setItem(k,JSON.stringify(m));loadChatMessages()}
+function deleteChatMessage(i){let k=getTargetChatKey(),m=JSON.parse(localStorage.getItem(k)||'[]');m[i].isDeleted=true;m[i].text="تم حذف هذه الرسالة";m[i].reaction="";localStorage.setItem(k,JSON.stringify(m));loadChatMessages()}
+function sendUserChatMessage(){const i=document.getElementById('chatInputText'),t=i.value.trim();if(!t)return;let k=getTargetChatKey(),r=(isAdmin()&&adminActiveChatKey)?'admin':'user',m=JSON.parse(localStorage.getItem(k)||'[]');m.push({sender:r,text:t,time:new Date().toLocaleTimeString('ar-EG',{hour:'2-digit',minute:'2-digit'}),type:'text',reaction:'',isDeleted:!1});localStorage.setItem(k,JSON.stringify(m));let a=JSON.parse(localStorage.getItem('fr3on_active_chats_list')||'[]');if(!a.includes(k)){a.push(k);localStorage.setItem('fr3on_active_chats_list',JSON.stringify(a))}i.value='';loadChatMessages()}
+function checkChatEnter(e){if(e.key==='Enter')sendUserChatMessage()}
+function sendChatImage(e){const f=e.target.files[0];if(f){const r=new FileReader();r.onload=function(ev){let k=getTargetChatKey(),ro=(isAdmin()&&adminActiveChatKey)?'admin':'user',m=JSON.parse(localStorage.getItem(k)||'[]');m.push({sender:ro,text:ev.target.result,time:new Date().toLocaleTimeString('ar-EG',{hour:'2-digit',minute:'2-digit'}),type:'img',reaction:'',isDeleted:!1});localStorage.setItem(k,JSON.stringify(m));let a=JSON.parse(localStorage.getItem('fr3on_active_chats_list')||'[]');if(!a.includes(k)){a.push(k);localStorage.setItem('fr3on_active_chats_list',JSON.stringify(a))}loadChatMessages()};r.readAsDataURL(f)}}
+function openLightBox(s){document.getElementById('lightBoxImg').src=s;document.getElementById('imageLightBox').classList.add('show')}
+function closeLightBox(){document.getElementById('imageLightBox').classList.remove('show')}
+function openFilterCategoryModal(){document.getElementById('filterCategoryModal').classList.add('show')}
+function closeFilterCategoryModal(e){if(e.target.id==='filterCategoryModal'||e.type==='click')document.getElementById('filterCategoryModal').classList.remove('show')}
+function selectFilterCategory(c,e){document.querySelectorAll('#filterCategoryModal .category-option').forEach(o=>o.classList.remove('selected'));e.classList.add('selected');document.getElementById('filterSelectedCategoryText').innerText=c;closeFilterCategoryModal();loadAllPosts()}
+function addNewPostToChannel(){if(!isAdmin())return;let t=document.getElementById('postTitleInput').value.trim(),d=document.getElementById('postDescInput').value.trim(),i=document.getElementById('postImageInput').value.trim(),l=document.getElementById('postLinkInput').value.trim(),n={title:t||'منشور رسمي',desc:d||'',img:i||'',link:l||'',comments:[],likes:0,isLiked:!1};try{let c=JSON.parse(localStorage.getItem('fr3on_channel_posts')||'[]');c.unshift(n);localStorage.setItem('fr3on_channel_posts',JSON.stringify(c))}catch(e){let c=JSON.parse(localStorage.getItem('fr3on_channel_posts')||'[]');if(c.length>0)c.pop();c.unshift(n);localStorage.setItem('fr3on_channel_posts',JSON.stringify(c))}document.getElementById('postTitleInput').value='';document.getElementById('postDescInput').value='';document.getElementById('postImageInput').value='';document.getElementById('postLinkInput').value='';loadChannelPosts();showNotification("تم النشر في القناة بنجاح! 🚀")}
+function handleImagePick(e){const f=e.target.files[0];if(f){const r=new FileReader();r.onload=function(ev){let i=new Image();i.src=ev.target.result;i.onload=function(){let c=document.createElement('canvas'),ctx=c.getContext('2d'),mw=500,mh=500,w=i.width,h=i.height;if(w>h){if(w>mw){h*=mw/w;w=mw}}else{if(h>mh){w*=mh/h;h=mh}}c.width=w;c.height=h;ctx.drawImage(i,0,0,w,h);document.getElementById('postImageInput').value=c.toDataURL('image/jpeg',0.5)}};r.readAsDataURL(f)}}
+function loadChannelPosts(){const c=document.getElementById('channelPostsContainer');if(!c)return;let p=JSON.parse(localStorage.getItem('fr3on_channel_posts')||'[]');c.innerHTML=p.length===0?'<p style="color:#8b949e;text-align:center;">لا توجد منشورات.</p>':'';p.forEach((post,i)=>{let im=post.img?`<img src="${post.img}" onclick="openLightBox('${post.img}')" style="width:100%;max-height:350px;object-fit:cover;border-radius:12px;margin-bottom:12px;cursor:pointer;border:1px solid #1c2634;">`:'';let ca=post.comments||[],l=post.likes||0,il=post.isLiked||!1;c.innerHTML+=`<div style="background:#090c10;border:1px solid #1c2634;border-radius:24px;padding:22px;margin-bottom:20px;box-shadow:0 4px 20px rgba(0,0,0,0.6);"><div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:15px;border-bottom:1px solid #161b22;padding-bottom:12px;"><div style="display:flex;align-items:center;gap:12px;"><div style="width:45px;height:45px;border-radius:12px;overflow:hidden;border:1px solid var(--cyan);"><img class="fr3on-logo" style="width:100%;height:100%;object-fit:cover;"></div><div><div style="display:flex;align-items:center;gap:5px;"><span style="color:#fff;font-size:15px;font-weight:bold;">الإدارة</span><span style="color:var(--cyan);font-size:13px;"><i class="fa-solid fa-circle-check"></i></span></div><span style="color:#8b949e;font-size:11px;">٩ أكتوبر ٢٠٢٦</span></div></div></div><h3 style="color:#fff;font-size:17px;font-weight:bold;margin-bottom:10px;">${post.title}</h3><p style="color:#c9d1d9;font-size:13.5px;line-height:1.7;margin-bottom:15px;">${post.desc}</p>${im}<div style="display:flex;align-items:center;justify-content:space-between;border-top:1px solid #161b22;padding-top:15px;margin-top:15px;"><button onclick="shareChannelPost(${i})" style="background:#161b22;color:#8b949e;border:1px solid #30363d;border-radius:16px;padding:8px 16px;display:flex;align-items:center;gap:8px;cursor:pointer;font-size:13px;"><i class="fa-solid fa-share"></i></button><button onclick="openCommentsModal(${i})" style="background:#161b22;color:#fff;border:1px solid #30363d;border-radius:16px;padding:8px 18px;display:flex;align-items:center;gap:8px;cursor:pointer;font-size:13px;font-weight:bold;"><i class="fa-regular fa-comment" style="color:var(--cyan);"></i><span>${ca.length} التعليقات</span></button><button onclick="toggleLikePost(${i})" style="background:#161b22;color:${il?'#ff4d4d':'#8b949e'};border:1px solid #30363d;border-radius:16px;padding:8px 16px;display:flex;align-items:center;gap:8px;cursor:pointer;font-size:13px;"><i class="${il?'fa-solid fa-thumbs-up':'fa-regular fa-thumbs-up'}"></i><span>${l>0?l:''}</span></button></div></div>`});document.querySelectorAll(".fr3on-logo").forEach(img=>{img.src=currentLogo})}
+function toggleLikePost(i){let c=JSON.parse(localStorage.getItem('fr3on_channel_posts')||'[]'),p=c[i];if(p.isLiked){p.isLiked=!1;p.likes=Math.max(0,(p.likes||1)-1)}else{p.isLiked=!0;p.likes=(p.likes||0)+1}localStorage.setItem('fr3on_channel_posts',JSON.stringify(c));loadChannelPosts()}
+function shareChannelPost(i){let u=window.location.href.split('?')[0]+'?postId='+i;if(navigator.clipboard){navigator.clipboard.writeText(u).then(()=>{showNotification("تم نسخ رابط المنشور بنجاح! 📋")})}else{prompt("انسخ الرابط:",u)}}
+function openCommentsModal(i){currentActivePostIndex=i;document.getElementById('commentsModal').style.display='flex';loadPostComments()}
+function closeCommentsModal(){document.getElementById('commentsModal').style.display='none';currentActivePostIndex=null}
+function loadPostComments(){if(currentActivePostIndex===null)return;let c=JSON.parse(localStorage.getItem('fr3on_channel_posts')||'[]'),p=c[currentActivePostIndex],cm=p.comments||[];document.getElementById('commentsCountBadge').innerText=cm.length;const el=document.getElementById('commentsListContainer');el.innerHTML=cm.length===0?'<p style="color:#8b949e;font-size:13px;text-align:center;margin-top:20px;">لا توجد تعليقات.</p>':'';cm.forEach(i=>{el.innerHTML+=`<div style="background:#161b22;border:1px solid #30363d;border-radius:14px;padding:12px 14px;"><div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:6px;"><span style="color:var(--cyan);font-size:13.5px;font-weight:bold;">${i.author}</span><span style="color:#8b949e;font-size:10.5px;">${i.time}</span></div><p style="color:#fff;font-size:13px;line-height:1.5;margin:0;">${i.text}</p></div>`});el.scrollTop=el.scrollHeight}
+function submitNewComment(){const i=document.getElementById('newCommentInput'),t=i.value.trim();if(!t||currentActivePostIndex===null)return;let c=JSON.parse(localStorage.getItem('fr3on_channel_posts')||'[]');if(!c[currentActivePostIndex].comments){c[currentActivePostIndex].comments=[]}c[currentActivePostIndex].comments.push({author:currentUser.name||'زائر',text:t,time:new Date().toLocaleDateString('ar-EG')+'، '+new Date().toLocaleTimeString('ar-EG',{hour:'2-digit',minute:'2-digit'})});localStorage.setItem('fr3on_channel_posts',JSON.stringify(c));i.value='';loadPostComments();loadChannelPosts()}
+function checkCommentEnter(e){if(e.key==='Enter'){submitNewComment()}}
+
+window.onload=function(){
+    applySiteColors();
+    renderDynamicStore();
+    renderNav();
+    loadChannelPosts();
+    restoreSession();
+    renderHomePageDynamicElements();
+    updateSiteTextsUI();
+};
+</script>
+</body>
+</html>
